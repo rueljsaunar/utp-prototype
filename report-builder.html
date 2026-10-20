@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UTP Report builder</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#B0102A}a:hover{color:#7A0A1C}
+</style>
+<style>:focus-visible{outline:3px solid #C8102E;outline-offset:2px}</style>
+<script src="runtime.js" defer></script>
+</head>
+<body>
+<div id="app"></div>
+<template id="tpl">
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; color: #111113; background: #F5F5F6">
+
+<nav aria-label="Main" style="flex: 1 1 240px; max-width: 100%; box-sizing: border-box; background: #0B0B0D; color: #FFFFFF; padding: 20px 16px; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; align-items: center; gap: 10px; padding: 0 8px">
+<div style="width: 32px; height: 32px; border-radius: 8px; background: {{accent}}; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px">U</div>
+<div style="display: flex; flex-direction: column"><span style="font-weight: 700; font-size: 16px; letter-spacing: 0.02em">UTP</span><span style="font-size: 11px; color: #A1A1A8">Unified Test Platform</span></div>
+</div>
+<button type="button" style="display: flex; align-items: center; justify-content: space-between; min-height: 44px; padding: 0 12px; border-radius: 8px; border: 1px solid #2A2A2F; background: #141417; color: #FFFFFF; font: inherit; font-size: 13px; cursor: pointer">Project: Customer Portal<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 0 12px 6px">TEST MANAGEMENT</span>
+<a href="index.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span>Dashboard</a>
+<a href="requirements.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></span>Requirements</a>
+<a href="test-case.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg></span>Test Cases</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">AUTOMATION</span>
+<a href="scripts.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span>Scripts</a>
+<a href="ai-studio.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></span>AI Studio</a>
+<a href="recorder.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></span>Recorder</a>
+<a href="object-repository.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg></span>Object Repository</a>
+<a href="framework-export.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg></span>Framework Export</a>
+<a href="api-testing.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1M16 3h1a2 2 0 0 1 2 2v5a2 2 0 0 0 2 2 2 2 0 0 0-2 2v5a2 2 0 0 1-2 2h-1"/></svg></span>API Testing</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">EXECUTION</span>
+<a href="new-run.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></span>New Run</a>
+<a href="results.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>Results</a>
+<a href="devices.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span>Devices</a>
+<a href="report-builder.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #FFFFFF; background: #222226; text-decoration: none; font-size: 14px; font-weight: 600"><span style="display: flex; color: {{accent}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12A9 9 0 1 1 12 3v9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/></svg></span>Reports</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">ADMIN</span>
+<a href="integrations.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></span>Integrations</a>
+</div>
+<div style="margin-top: auto; display: flex; align-items: center; gap: 10px; padding: 12px; border-top: 1px solid #222226">
+<div style="width: 32px; height: 32px; border-radius: 50%; background: #FFFFFF; color: #0B0B0D; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700">QL</div>
+<div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">QA Lead</span><span style="font-size: 11px; color: #A1A1A8">Admin access</span></div>
+</div>
+</nav>
+
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column">
+<header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 24px; background: #FFFFFF; border-bottom: 1px solid #E4E4E7">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+<h1 style="margin: 0; font-size: 20px; font-weight: 700">Report builder</h1>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #55555D">Template<select style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; background: #FFFFFF; color: #111113"><option>Executive summary</option><option>QA lead weekly</option><option>Engineer detail</option><option>External stakeholder</option><option>API run report</option><option>API SLA summary</option></select></label>
+<span style="padding: 3px 10px; border-radius: 999px; font-size: 12px; background: #F0F0F2">Default for nightly runs</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<button type="button" style="min-height: 40px; padding: 0 14px; border-radius: 8px; border: 1px solid #D4D4D8; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Schedule</button>
+<button type="button" style="min-height: 40px; padding: 0 14px; border-radius: 8px; border: 1px solid #111113; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Export PDF</button>
+<button type="button" style="min-height: 40px; padding: 0 16px; border-radius: 8px; border: 0; background: {{accent}}; color: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Save template</button>
+</div>
+</header>
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; padding: 20px 24px 32px; align-items: flex-start">
+<aside aria-label="Widget library" style="flex: 1 1 190px; background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; font-weight: 600; color: #55555D; padding-bottom: 6px">ADD WIDGET</span>
+<template data-sc="for" list="{{library}}" as="w" hint-placeholder-count="10"><button type="button" style="display: flex; justify-content: space-between; align-items: center; min-height: 40px; padding: 0 10px; border-radius: 6px; border: 1px solid #E4E4E7; background: #FFFFFF; font: inherit; font-size: 13px; text-align: left; cursor: pointer">{{w}}<span aria-hidden="true" style="font-weight: 700; color: #55555D">+</span></button></template>
+</aside>
+
+<section aria-label="Report canvas" style="flex: 4 1 520px; min-width: 0; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 12px">
+<div style="grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-radius: 10px; background: #0B0B0D; color: #FFFFFF"><div><div style="font-size: 16px; font-weight: 700">Customer Portal · Executive summary</div><div style="font-size: 12px; color: #C4C4CA">staging · last 30 days · all platforms</div></div><span style="width: 32px; height: 32px; border-radius: 8px; background: {{accent}}; display: flex; align-items: center; justify-content: center; font-weight: 700">U</span></div>
+<template data-sc="for" list="{{kpis}}" as="k" hint-placeholder-count="4"><div style="grid-column: span 3; background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 4px"><span style="font-size: 12px; color: #55555D">{{k.label}}</span><span style="font-size: 24px; font-weight: 700">{{k.value}}</span><span style="font-size: 11px; color: {{k.nc}}">{{k.note}}</span></div></template>
+
+<div style="grid-column: span 7; background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600">Pass rate by week</span>
+<svg viewBox="0 0 360 150" role="img" aria-label="Pass rate by week, with a 95 percent target line" style="width: 100%; height: auto">
+<line x1="30" y1="130" x2="350" y2="130" stroke="#D4D4D8"/>
+<line x1="30" y1="40" x2="350" y2="40" stroke="{{accent}}" stroke-dasharray="4 4"/>
+<text x="346" y="34" text-anchor="end" font-size="10" fill="#A00C25">target 95%</text>
+<text x="24" y="134" text-anchor="end" font-size="10" fill="#55555D">85%</text><text x="24" y="22" text-anchor="end" font-size="10" fill="#55555D">100%</text>
+<polyline points="50,70 125,58 200,64 275,46 340,34" fill="none" stroke="#111113" stroke-width="2.5"/>
+<circle cx="50" cy="70" r="4" fill="#111113"/><circle cx="125" cy="58" r="4" fill="#111113"/><circle cx="200" cy="64" r="4" fill="#111113"/><circle cx="275" cy="46" r="4" fill="#111113"/><circle cx="340" cy="34" r="4" fill="#111113"/>
+<text x="50" y="146" text-anchor="middle" font-size="10" fill="#55555D">W38</text><text x="125" y="146" text-anchor="middle" font-size="10" fill="#55555D">W39</text><text x="200" y="146" text-anchor="middle" font-size="10" fill="#55555D">W40</text><text x="275" y="146" text-anchor="middle" font-size="10" fill="#55555D">W41</text><text x="340" y="146" text-anchor="middle" font-size="10" fill="#55555D">W42</text>
+</svg>
+</div>
+
+<div style="grid-column: span 5; background: #FFFFFF; border: 2px solid {{accent}}; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between"><span style="font-size: 13px; font-weight: 600">Failures by category</span><span style="font-size: 11px; font-weight: 700; color: #A00C25">Selected</span></div>
+<template data-sc="if" value="{{isDonut}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; gap: 12px; align-items: center">
+<svg width="110" height="110" viewBox="0 0 100 100" role="img" aria-label="Failures by category donut chart"><g transform="rotate(-90 50 50)" fill="none" stroke-width="16"><circle cx="50" cy="50" r="40" stroke="#111113" stroke-dasharray="102.8 251.3"/><circle cx="50" cy="50" r="40" stroke="{{accent}}" stroke-dasharray="68.5 251.3" stroke-dashoffset="-102.8"/><circle cx="50" cy="50" r="40" stroke="#6B6B73" stroke-dasharray="34.3 251.3" stroke-dashoffset="-171.3"/><circle cx="50" cy="50" r="40" stroke="#A1A1A8" stroke-dasharray="22.8 251.3" stroke-dashoffset="-205.6"/><circle cx="50" cy="50" r="40" stroke="#D4D4D8" stroke-dasharray="22.8 251.3" stroke-dashoffset="-228.4"/></g><text x="50" y="55" text-anchor="middle" font-size="16" font-weight="700" fill="#111113">22</text></svg>
+<div style="display: flex; flex-direction: column; gap: 4px; font-size: 12px"><template data-sc="for" list="{{cats}}" as="c" hint-placeholder-count="5"><span style="display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 10px; border-radius: 2px; background: {{c.color}}"></span>{{c.name}} · {{c.n}}</span></template></div>
+</div>
+</template>
+<template data-sc="if" value="{{isBar}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 12px"><template data-sc="for" list="{{cats}}" as="c" hint-placeholder-count="5"><div style="display: flex; align-items: center; gap: 8px"><span style="width: 104px">{{c.name}}</span><span style="height: 14px; width: {{c.w}}; background: {{c.bar}}; border-radius: 3px"></span><span>{{c.n}}</span></div></template></div>
+</template>
+<template data-sc="if" value="{{isTable}}" hint-placeholder-val="{{ false }}">
+<table style="width: 100%; border-collapse: collapse; font-size: 12px"><tbody><template data-sc="for" list="{{cats}}" as="c" hint-placeholder-count="5"><tr style="border-bottom: 1px solid #EEEEF0"><td style="padding: 6px 4px">{{c.name}}</td><td style="padding: 6px 4px; text-align: right; font-weight: 700">{{c.n}}</td></tr></template></tbody></table>
+</template>
+</div>
+
+<div style="grid-column: 1 / -1; background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600">Failed tests</span>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 520px; border-collapse: collapse; font-size: 12px">
+<thead><tr style="text-align: left; color: #55555D; border-bottom: 1px solid #E4E4E7"><th style="padding: 8px; font-weight: 600">Test</th><th style="padding: 8px; font-weight: 600">Platform</th><th style="padding: 8px; font-weight: 600">Category</th><template data-sc="if" value="{{showError}}" hint-placeholder-val="{{ true }}"><th style="padding: 8px; font-weight: 600">Error message</th></template><template data-sc="if" value="{{showAi}}" hint-placeholder-val="{{ true }}"><th style="padding: 8px; font-weight: 600">AI analysis</th></template></tr></thead>
+<tbody>
+<tr style="border-bottom: 1px solid #EEEEF0"><td style="padding: 8px; font-weight: 600">User can log in</td><td style="padding: 8px">Safari · macOS</td><td style="padding: 8px">Locator change</td><template data-sc="if" value="{{showError}}" hint-placeholder-val="{{ true }}"><td style="padding: 8px; font-family: 'IBM Plex Mono', monospace">toBeVisible() timeout</td></template><template data-sc="if" value="{{showAi}}" hint-placeholder-val="{{ true }}"><td style="padding: 8px">Test id renamed; fix PR ready</td></template></tr>
+<tr><td style="padding: 8px; font-weight: 600">Reset password by email</td><td style="padding: 8px">Safari · macOS</td><td style="padding: 8px">Product bug</td><template data-sc="if" value="{{showError}}" hint-placeholder-val="{{ true }}"><td style="padding: 8px; font-family: 'IBM Plex Mono', monospace">Expected 'Check your inbox'</td></template><template data-sc="if" value="{{showAi}}" hint-placeholder-val="{{ true }}"><td style="padding: 8px">Message missing after submit</td></template></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<aside aria-label="Properties" style="flex: 2 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-size: 14px; font-weight: 600">Selected widget</h2>
+<div role="radiogroup" aria-label="Chart type" style="display: flex; flex-wrap: wrap; gap: 6px">
+<template data-sc="for" list="{{chartTypes}}" as="t" hint-placeholder-count="3"><button type="button" role="radio" aria-checked="{{t.on}}" onClick="{{t.pick}}" style="min-height: 36px; padding: 0 12px; border-radius: 6px; border: 1px solid #111113; background: {{t.bg}}; color: {{t.fg}}; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer">{{t.label}}</button></template>
+</div>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Measure<select style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400; background: #FFFFFF"><option>Failures (count)</option><option>Pass rate</option><option>Average duration</option><option>Flaky rate</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Group by<select style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400; background: #FFFFFF"><option>Failure category</option><option>Browser / device</option><option>Suite</option><option>Requirement</option><option>Week</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Width<select style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400; background: #FFFFFF"><option>5 of 12 columns</option><option>6 of 12 columns</option><option>Full width</option></select></label>
+</section>
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 8px; font-size: 13px">
+<h2 style="margin: 0 0 4px; font-size: 14px; font-weight: 600">Information shown in this report</h2>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" checked="{{showError}}" onChange="{{toggleError}}" style="accent-color: {{accent}}; width: 18px; height: 18px">Error message</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" checked="{{showAi}}" onChange="{{toggleAi}}" style="accent-color: {{accent}}; width: 18px; height: 18px">AI analysis</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" style="accent-color: {{accent}}; width: 18px; height: 18px">Step details</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" style="accent-color: {{accent}}; width: 18px; height: 18px">Stack trace</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" style="accent-color: {{accent}}; width: 18px; height: 18px">Screenshots and video</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" style="accent-color: {{accent}}; width: 18px; height: 18px">Playwright trace and logs</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" style="accent-color: {{accent}}; width: 18px; height: 18px">API request and response bodies</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" style="accent-color: {{accent}}; width: 18px; height: 18px">API headers and console logs</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" checked style="accent-color: {{accent}}; width: 18px; height: 18px">Requirement coverage</label>
+</section>
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<h2 style="margin: 0; font-size: 14px; font-weight: 600">Filters and access</h2>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Period<select style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400; background: #FFFFFF"><option>Last 30 days</option><option>Last 7 days</option><option>This release</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Visible to<select style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400; background: #FFFFFF"><option>Project members</option><option>Only me</option><option>Organisation</option></select></label>
+<span style="font-size: 12px; color: #55555D">Hidden fields are removed by the server for Viewers and share links.</span>
+</section>
+</aside>
+</div>
+</main>
+</div>
+</template>
+<script type="text/plain" id="logic">
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#C8102E';
+    const st = this.state || {};
+    const chart = st.chart || 'donut';
+    const showError = st.showError ?? true;
+    const showAi = st.showAi ?? true;
+    const colors = ['#111113', accent, '#6B6B73', '#A1A1A8', '#D4D4D8'];
+    const raw = [['Locator change', 9], ['Product bug', 6], ['Test data', 3], ['Environment', 2], ['Timing', 2]];
+    return {
+      accent, showError, showAi,
+      isDonut: chart === 'donut', isBar: chart === 'bar', isTable: chart === 'table',
+      chartTypes: [['donut', 'Donut'], ['bar', 'Bar'], ['table', 'Table']].map(([id, label]) => ({ label, on: id === chart ? 'true' : 'false', bg: id === chart ? '#0B0B0D' : '#FFFFFF', fg: id === chart ? '#FFFFFF' : '#111113', pick: () => this.setState({ chart: id }) })),
+      toggleError: () => this.setState({ showError: !showError }),
+      toggleAi: () => this.setState({ showAi: !showAi }),
+      cats: raw.map(([name, n], i) => ({ name, n, color: colors[i], bar: i === 1 ? accent : '#111113', w: Math.round(n / 9 * 120) + 'px' })),
+      kpis: [
+        { label: 'Pass rate', value: '94.2%', note: 'Below 95% target', nc: '#A00C25' },
+        { label: 'Tests executed', value: '8,412', note: 'web and mobile', nc: '#55555D' },
+        { label: 'Requirement coverage', value: '78%', note: '312 of 400', nc: '#55555D' },
+        { label: 'Open defects', value: '7', note: '2 critical', nc: '#55555D' }
+      ],
+      library: ['KPI tile', 'Line chart', 'Bar chart', 'Donut chart', 'Results matrix', 'Test table', 'Coverage', 'Flaky tests', 'Duration trend', 'API response times', 'API status codes', 'API assertions', 'Iteration matrix', 'Notes']
+    };
+  }
+}
+</script>
+<script type="application/json" id="props">{"accent": "#C8102E"}</script>
+</body>
+</html>

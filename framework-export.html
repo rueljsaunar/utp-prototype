@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UTP Framework export</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#B0102A}a:hover{color:#7A0A1C}
+</style>
+<style>:focus-visible{outline:3px solid #C8102E;outline-offset:2px}</style>
+<script src="runtime.js" defer></script>
+</head>
+<body>
+<div id="app"></div>
+<template id="tpl">
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; color: #111113; background: #F5F5F6">
+
+<nav aria-label="Main" style="flex: 1 1 240px; max-width: 100%; box-sizing: border-box; background: #0B0B0D; color: #FFFFFF; padding: 20px 16px; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; align-items: center; gap: 10px; padding: 0 8px">
+<div style="width: 32px; height: 32px; border-radius: 8px; background: {{accent}}; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px">U</div>
+<div style="display: flex; flex-direction: column"><span style="font-weight: 700; font-size: 16px; letter-spacing: 0.02em">UTP</span><span style="font-size: 11px; color: #A1A1A8">Unified Test Platform</span></div>
+</div>
+<button type="button" style="display: flex; align-items: center; justify-content: space-between; min-height: 44px; padding: 0 12px; border-radius: 8px; border: 1px solid #2A2A2F; background: #141417; color: #FFFFFF; font: inherit; font-size: 13px; cursor: pointer">Project: Customer Portal<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 0 12px 6px">TEST MANAGEMENT</span>
+<a href="index.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span>Dashboard</a>
+<a href="requirements.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></span>Requirements</a>
+<a href="test-case.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg></span>Test Cases</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">AUTOMATION</span>
+<a href="scripts.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span>Scripts</a>
+<a href="ai-studio.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></span>AI Studio</a>
+<a href="recorder.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></span>Recorder</a>
+<a href="object-repository.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg></span>Object Repository</a>
+<a href="framework-export.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #FFFFFF; background: #222226; text-decoration: none; font-size: 14px; font-weight: 600"><span style="display: flex; color: {{accent}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg></span>Framework Export</a>
+<a href="api-testing.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1M16 3h1a2 2 0 0 1 2 2v5a2 2 0 0 0 2 2 2 2 0 0 0-2 2v5a2 2 0 0 1-2 2h-1"/></svg></span>API Testing</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">EXECUTION</span>
+<a href="new-run.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></span>New Run</a>
+<a href="results.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>Results</a>
+<a href="devices.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span>Devices</a>
+<a href="report-builder.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12A9 9 0 1 1 12 3v9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/></svg></span>Reports</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">ADMIN</span>
+<a href="integrations.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></span>Integrations</a>
+</div>
+<div style="margin-top: auto; display: flex; align-items: center; gap: 10px; padding: 12px; border-top: 1px solid #222226">
+<div style="width: 32px; height: 32px; border-radius: 50%; background: #FFFFFF; color: #0B0B0D; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700">QL</div>
+<div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">QA Lead</span><span style="font-size: 11px; color: #A1A1A8">Admin access</span></div>
+</div>
+</nav>
+
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column">
+<div style="padding: 28px 32px 40px; display: flex; flex-direction: column; gap: 16px; max-width: 1280px; box-sizing: border-box; width: 100%">
+<div><h1 style="margin: 0; font-size: 28px; font-weight: 700">Framework export</h1><p style="margin: 4px 0 0; font-size: 14px; color: #55555D">Export the entire automation project in your framework's structure, to GitHub or as a ZIP</p></div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+<div style="flex: 3 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">1 · Target framework</h2>
+<div role="radiogroup" aria-label="Target framework" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px">
+<template data-sc="for" list="{{targets}}" as="t" hint-placeholder-count="3">
+<button type="button" role="radio" aria-checked="{{t.on}}" onClick="{{t.pick}}" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; padding: 14px; border-radius: 10px; border: {{t.border}}; background: #FFFFFF; font: inherit; text-align: left; cursor: pointer"><span style="font-size: 14px; font-weight: 700">{{t.name}}</span><span style="font-size: 12px; color: #55555D">{{t.desc}}</span></button>
+</template>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end">
+<label style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Framework profile<select style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400; background: #FFFFFF"><option>{{profile}}</option><option>UTP default</option><option>New profile…</option></select></label>
+<button type="button" style="min-height: 40px; padding: 0 14px; border-radius: 8px; border: 1px solid #111113; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Analyze client repo</button>
+<button type="button" style="min-height: 40px; padding: 0 14px; border-radius: 8px; border: 1px solid #D4D4D8; background: #FFFFFF; font: inherit; font-size: 13px; cursor: pointer">Edit templates</button>
+</div>
+<p style="margin: 0; font-size: 12px; color: #55555D">Profile settings: snake_case files and functions, BasePage in pages/base_page.py, fixtures in conftest.py, tags mapped to markers, Allure reporting.</p>
+</section>
+
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">2 · Scope and contents</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px">
+<label style="display: flex; align-items: center; gap: 8px"><input type="radio" name="scope" checked style="accent-color: {{accent}}; width: 18px; height: 18px">Entire project · 148 tests</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="radio" name="scope" style="accent-color: {{accent}}; width: 18px; height: 18px">Selected suites</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="radio" name="scope" style="accent-color: {{accent}}; width: 18px; height: 18px">By tag</label>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; font-size: 13px">
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" checked style="accent-color: {{accent}}; width: 18px; height: 18px">Page objects from Object Repository</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" checked style="accent-color: {{accent}}; width: 18px; height: 18px">Mobile tests (Appium-Python-Client)</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" checked style="accent-color: {{accent}}; width: 18px; height: 18px">API tests (requests) + Postman collection</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" checked style="accent-color: {{accent}}; width: 18px; height: 18px">Test-data templates (.example only)</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" checked style="accent-color: {{accent}}; width: 18px; height: 18px">CI workflow (GitHub Actions)</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" checked style="accent-color: {{accent}}; width: 18px; height: 18px">README and setup guide</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" style="accent-color: {{accent}}; width: 18px; height: 18px">Smoke run before delivery</label>
+</div>
+</section>
+
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">3 · Destination</h2>
+<div role="radiogroup" aria-label="Destination" style="display: flex; gap: 8px">
+<button type="button" role="radio" aria-checked="{{ghOn}}" onClick="{{pickGh}}" style="min-height: 44px; padding: 0 18px; border-radius: 8px; border: 1px solid #111113; background: {{ghBg}}; color: {{ghFg}}; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">GitHub repository</button>
+<button type="button" role="radio" aria-checked="{{zipOn}}" onClick="{{pickZip}}" style="min-height: 44px; padding: 0 18px; border-radius: 8px; border: 1px solid #111113; background: {{zipBg}}; color: {{zipFg}}; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">ZIP download</button>
+</div>
+<template data-sc="if" value="{{isGh}}" hint-placeholder-val="{{ true }}">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Repository<select style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400; background: #FFFFFF"><option>[org]/customer-portal-tests (existing)</option><option>Create new private repository</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Branch<input value="utp-export/2026-10-20" style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 400"></label>
+</div>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 13px"><input type="checkbox" checked style="accent-color: {{accent}}; width: 18px; height: 18px">Open a pull request to main (no direct push)</label>
+<span style="font-size: 12px; color: #55555D">Connected through the UTP GitHub App with access to selected repositories only.</span>
+</template>
+<template data-sc="if" value="{{isZip}}" hint-placeholder-val="{{ false }}">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">File name<input value="customer-portal-tests.zip" style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 400"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Link expires<select style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400; background: #FFFFFF"><option>After 24 hours</option><option>After 1 hour</option></select></label>
+</div>
+<span style="font-size: 12px; color: #55555D">Includes manifest.json and SHA-256 checksums. Secrets are never included.</span>
+</template>
+</section>
+</div>
+
+<aside style="flex: 2 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<section aria-label="Preview" style="background: #0B0B0D; color: #ECECEE; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: center"><h2 style="margin: 0; font-size: 14px; font-weight: 600; color: #FFFFFF">Preview</h2><span style="font-size: 12px; color: #A1A1A8">{{fileCount}}</span></div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 20px; white-space: pre; overflow-x: auto; padding: 10px; border-radius: 8px; background: #1A1A1D">{{tree}}</div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; line-height: 19px; white-space: pre; overflow-x: auto; padding: 10px; border-radius: 8px; background: #1A1A1D">{{sample}}</div>
+</section>
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 8px; font-size: 13px">
+<h2 style="margin: 0; font-size: 14px; font-weight: 600">Validation (last dry run)</h2>
+<template data-sc="for" list="{{checks}}" as="c" hint-placeholder-count="4"><div style="display: flex; gap: 8px"><span style="width: 44px; flex: none; font-weight: 700; color: {{c.color}}">{{c.mark}}</span><span>{{c.text}}</span></div></template>
+</section>
+<button type="button" style="min-height: 48px; border-radius: 8px; border: 0; background: {{accent}}; color: #FFFFFF; font: inherit; font-size: 15px; font-weight: 700; cursor: pointer">{{cta}}</button>
+</aside>
+</div>
+
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 18px; display: flex; flex-direction: column; gap: 10px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Export history</h2>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 680px; border-collapse: collapse; font-size: 13px">
+<thead><tr style="text-align: left; color: #55555D; border-bottom: 1px solid #E4E4E7"><th style="padding: 10px 8px; font-weight: 600">Export</th><th style="padding: 10px 8px; font-weight: 600">Framework</th><th style="padding: 10px 8px; font-weight: 600">Destination</th><th style="padding: 10px 8px; font-weight: 600">Status</th><th style="padding: 10px 8px; font-weight: 600">Result</th></tr></thead>
+<tbody>
+<tr style="border-bottom: 1px solid #EEEEF0"><td style="padding: 10px 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px">EXP-031</td><td style="padding: 10px 8px">Python · pytest</td><td style="padding: 10px 8px">GitHub</td><td style="padding: 10px 8px"><span style="padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; background: #E7F4EC; color: #165C38">Delivered</span></td><td style="padding: 10px 8px"><a href="#" style="font-weight: 600">Pull request #57</a> · 3 items need review</td></tr>
+<tr style="border-bottom: 1px solid #EEEEF0"><td style="padding: 10px 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px">EXP-030</td><td style="padding: 10px 8px">Python · behave</td><td style="padding: 10px 8px">ZIP</td><td style="padding: 10px 8px"><span style="padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; background: #E7F4EC; color: #165C38">Delivered</span></td><td style="padding: 10px 8px">Link expired</td></tr>
+<tr><td style="padding: 10px 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px">EXP-029</td><td style="padding: 10px 8px">Python · pytest</td><td style="padding: 10px 8px">GitHub</td><td style="padding: 10px 8px"><span style="padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; background: #FBE5E9; color: #A00C25">Validation failed</span></td><td style="padding: 10px 8px">2 tests failed collection · <a href="#" style="font-weight: 600">report</a></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</main>
+</div>
+</template>
+<script type="text/plain" id="logic">
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#C8102E';
+    const st = this.state || {};
+    const fw = st.fw || 'pytest';
+    const dest = st.dest || 'gh';
+    const T = [
+      ['pytest', 'Python · pytest', 'pytest-playwright, page objects, conftest fixtures'],
+      ['behave', 'Python · behave', 'Gherkin features, step definitions, page objects'],
+      ['ts', 'Playwright TypeScript', 'Native @playwright/test project']
+    ];
+    const TREE = {
+      pytest: 'customer-portal-tests/\n  pages/      base_page.py  login_page.py  …\n  tests/auth/ test_login.py  test_reset_password.py\n  tests/mobile/ test_login_android.py\n  data/       users.example.yaml\n  conftest.py  pytest.ini  requirements.txt\n  .env.example  README.md\n  .github/workflows/tests.yml',
+      behave: 'customer-portal-bdd/\n  features/auth/login.feature\n  features/steps/auth_steps.py\n  features/environment.py\n  pages/      base_page.py  login_page.py  …\n  behave.ini  requirements.txt\n  .env.example  README.md',
+      ts: 'customer-portal-tests/\n  pages/      login.page.ts  …\n  tests/auth/ login.spec.ts\n  playwright.config.ts  package.json\n  .env.example  README.md'
+    };
+    const SAMPLE = {
+      pytest: '@pytest.mark.smoke\n@pytest.mark.utp("TC-1042")\ndef test_user_can_log_in(page, users):\n    login_page = LoginPage(page)\n    login_page.open()\n    login_page.sign_in(users.standard)\n    expect(login_page.user_name).to_be_visible()',
+      behave: '@smoke @utp:TC-1042\nScenario: User can log in with valid credentials\n  Given the user is on the login page\n  When the user signs in as "standard"\n  Then the dashboard shows the user name',
+      ts: "test('User can log in', { tag: '@smoke' }, async ({ page }) => {\n  const loginPage = new LoginPage(page);\n  await loginPage.open();\n  await loginPage.signIn(users.standard);\n});"
+    };
+    const PROFILE = { pytest: 'Client standard · pytest (analysed from client repo)', behave: 'Client BDD · behave (analysed from client repo)', ts: 'UTP default · Playwright TS' };
+    const COLLECT = { pytest: 'pytest --collect-only: 148 tests collected', behave: 'behave --dry-run: 148 scenarios, 0 undefined steps', ts: 'npx playwright test --list: 148 tests' };
+    const ok = (text) => ({ mark: 'PASS', color: '#165C38', text });
+    return {
+      accent,
+      targets: T.map(([id, name, desc]) => ({ name, desc, on: id === fw ? 'true' : 'false', border: id === fw ? '2px solid ' + accent : '1px solid #D4D4D8', pick: () => this.setState({ fw: id }) })),
+      profile: PROFILE[fw],
+      tree: TREE[fw],
+      sample: SAMPLE[fw],
+      fileCount: fw === 'ts' ? '61 files' : '74 files',
+      checks: [
+        ok(fw === 'ts' ? 'tsc and ESLint: 0 errors' : 'ruff check and compileall: 0 errors'),
+        ok(COLLECT[fw]),
+        ok('No secrets or real data in output'),
+        { mark: 'REVIEW', color: '#8A5300', text: '3 hand-written scripts converted by AI, flagged for review' }
+      ],
+      isGh: dest === 'gh', isZip: dest === 'zip',
+      ghOn: dest === 'gh' ? 'true' : 'false', zipOn: dest === 'zip' ? 'true' : 'false',
+      ghBg: dest === 'gh' ? '#0B0B0D' : '#FFFFFF', ghFg: dest === 'gh' ? '#FFFFFF' : '#111113',
+      zipBg: dest === 'zip' ? '#0B0B0D' : '#FFFFFF', zipFg: dest === 'zip' ? '#FFFFFF' : '#111113',
+      pickGh: () => this.setState({ dest: 'gh' }),
+      pickZip: () => this.setState({ dest: 'zip' }),
+      cta: dest === 'gh' ? 'Export and open pull request' : 'Build ZIP for download'
+    };
+  }
+}
+</script>
+<script type="application/json" id="props">{"accent": "#C8102E"}</script>
+</body>
+</html>

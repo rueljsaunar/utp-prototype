@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UTP AI Studio</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#B0102A}a:hover{color:#7A0A1C}
+</style>
+<style>:focus-visible{outline:3px solid #C8102E;outline-offset:2px}</style>
+<script src="runtime.js" defer></script>
+</head>
+<body>
+<div id="app"></div>
+<template id="tpl">
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; color: #111113; background: #F5F5F6">
+
+<nav aria-label="Main" style="flex: 1 1 240px; max-width: 100%; box-sizing: border-box; background: #0B0B0D; color: #FFFFFF; padding: 20px 16px; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; align-items: center; gap: 10px; padding: 0 8px">
+<div style="width: 32px; height: 32px; border-radius: 8px; background: {{accent}}; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px">U</div>
+<div style="display: flex; flex-direction: column"><span style="font-weight: 700; font-size: 16px; letter-spacing: 0.02em">UTP</span><span style="font-size: 11px; color: #A1A1A8">Unified Test Platform</span></div>
+</div>
+<button type="button" style="display: flex; align-items: center; justify-content: space-between; min-height: 44px; padding: 0 12px; border-radius: 8px; border: 1px solid #2A2A2F; background: #141417; color: #FFFFFF; font: inherit; font-size: 13px; cursor: pointer">Project: Customer Portal<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 0 12px 6px">TEST MANAGEMENT</span>
+<a href="index.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg></span>Dashboard</a>
+<a href="requirements.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg></span>Requirements</a>
+<a href="test-case.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 12l3 3 5-6"></path></svg></span>Test Cases</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">AUTOMATION</span>
+<a href="scripts.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"></path></svg></span>Scripts</a>
+<a href="ai-studio.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #FFFFFF; background: #222226; text-decoration: none; font-size: 14px; font-weight: 600"><span style="display: flex; color: {{accent}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"></path></svg></span>AI Studio</a>
+<a href="recorder.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></span>Recorder</a>
+<a href="object-repository.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg></span>Object Repository</a>
+<a href="framework-export.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg></span>Framework Export</a>
+<a href="api-testing.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1M16 3h1a2 2 0 0 1 2 2v5a2 2 0 0 0 2 2 2 2 0 0 0-2 2v5a2 2 0 0 1-2 2h-1"/></svg></span>API Testing</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">EXECUTION</span>
+<a href="new-run.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 4l14 8-14 8z"></path></svg></span>New Run</a>
+<a href="results.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg></span>Results</a>
+<a href="devices.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"></rect><path d="M11 18h2"></path></svg></span>Devices</a>
+<a href="report-builder.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12A9 9 0 1 1 12 3v9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/></svg></span>Reports</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">ADMIN</span>
+<a href="integrations.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"></path></svg></span>Integrations</a>
+</div>
+<div style="margin-top: auto; display: flex; align-items: center; gap: 10px; padding: 12px; border-top: 1px solid #222226">
+<div style="width: 32px; height: 32px; border-radius: 50%; background: #FFFFFF; color: #0B0B0D; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700">QL</div>
+<div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">QA Lead</span><span style="font-size: 11px; color: #A1A1A8">Admin access</span></div>
+</div>
+</nav>
+
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column">
+<div style="padding: 24px 32px 40px; display: flex; flex-direction: column; gap: 18px; max-width: 1280px; box-sizing: border-box; width: 100%">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+<div><h1 style="margin: 0; font-size: 28px; font-weight: 700">AI Studio</h1><p style="margin: 4px 0 0; font-size: 14px; color: #55555D">Generate Playwright and Appium scripts, then review before they count as automated</p></div>
+<button type="button" style="display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 8px; border: 0; background: {{accent}}; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"></path></svg>New generation</button>
+</div>
+
+<div role="tablist" aria-label="Generation mode" style="display: flex; flex-wrap: wrap; gap: 6px; padding: 4px; background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; align-self: flex-start">
+<template data-sc="for" list="{{modes}}" as="m" hint-placeholder-count="5"><button type="button" role="tab" aria-selected="{{m.sel}}" onClick="{{m.pick}}" style="min-height: 40px; padding: 0 14px; border-radius: 7px; border: 0; background: {{m.bg}}; color: {{m.fg}}; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">{{m.label}}</button></template>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+<aside aria-label="Generation queue" style="flex: 1 1 250px; min-width: 0; background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 8px">
+<h2 style="margin: 0 0 4px; font-size: 14px; font-weight: 600">Queue</h2>
+<template data-sc="for" list="{{queue}}" as="q" hint-placeholder-count="5">
+<button type="button" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; padding: 10px 12px; border-radius: 8px; border: {{q.border}}; background: #FFFFFF; font: inherit; text-align: left; cursor: pointer"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55555D">{{q.key}}</span><span style="font-size: 13px; font-weight: 600">{{q.title}}</span><span style="font-size: 12px; font-weight: 600; color: {{q.sc}}">{{q.status}}</span></button>
+</template>
+</aside>
+
+<div style="flex: 4 1 640px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 18px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; align-items: center">
+<div><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #55555D">TC-1050 · tests/auth/reset-password.spec.ts</span><h2 style="margin: 2px 0 0; font-size: 18px; font-weight: 700">User can reset password by email link</h2></div>
+<div style="display: flex; gap: 8px; font-size: 12px"><span style="padding: 4px 10px; border-radius: 999px; background: #F0F0F2">Confidence 0.82</span><span style="padding: 4px 10px; border-radius: 999px; background: #F0F0F2">Repair attempts 1 of 3</span><span style="padding: 4px 10px; border-radius: 999px; background: #F0F0F2">9 values masked before sending</span></div>
+</div>
+<ol aria-label="Pipeline progress" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px">
+<li style="padding: 10px; border-radius: 8px; background: #111113; color: #FFFFFF; font-size: 12px"><div style="font-weight: 700">1 Context</div><div style="color: #C4C4CA">steps, page objects, DOM</div></li>
+<li style="padding: 10px; border-radius: 8px; background: #111113; color: #FFFFFF; font-size: 12px"><div style="font-weight: 700">2 Prompt</div><div style="color: #C4C4CA">JSON reply validated</div></li>
+<li style="padding: 10px; border-radius: 8px; background: #111113; color: #FFFFFF; font-size: 12px"><div style="font-weight: 700">3 Static checks</div><div style="color: #C4C4CA">tsc, ESLint, policy</div></li>
+<li style="padding: 10px; border-radius: 8px; background: #111113; color: #FFFFFF; font-size: 12px"><div style="font-weight: 700">4 Dry run</div><div style="color: #C4C4CA">passed on attempt 2</div></li>
+<li style="padding: 10px; border-radius: 8px; background: {{accent}}; color: #FFFFFF; font-size: 12px"><div style="font-weight: 700">5 Human review</div><div>waiting for you</div></li>
+</ol>
+</section>
+
+<section style="display: flex; flex-wrap: wrap; gap: 0; background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; overflow: hidden">
+<div style="flex: 1 1 260px; min-width: 0; padding: 16px; display: flex; flex-direction: column; gap: 10px; border-right: 1px solid #E4E4E7">
+<h3 style="margin: 0; font-size: 13px; font-weight: 600; color: #3F3F46">Test case steps</h3>
+<template data-sc="for" list="{{steps}}" as="s" hint-placeholder-count="3">
+<div style="display: flex; gap: 10px; padding: 10px; border-radius: 8px; background: #F5F5F6"><span style="width: 24px; height: 24px; flex: none; border-radius: 50%; background: #111113; color: #FFFFFF; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">{{s.n}}</span><div style="font-size: 13px"><div style="font-weight: 600">{{s.action}}</div><div style="color: #55555D">Expected: {{s.expected}}</div><div style="margin-top: 4px; font-size: 12px; color: #165C38; font-weight: 600">Mapped to lines {{s.lines}}</div></div></div>
+</template>
+</div>
+<div style="flex: 2 1 420px; min-width: 0; background: #0B0B0D; padding: 14px 0; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; line-height: 21px; overflow-x: auto">
+<template data-sc="for" list="{{code}}" as="l" hint-placeholder-count="20">
+<div style="display: flex; white-space: pre; background: {{l.hl}}"><span style="width: 40px; flex: none; padding-right: 14px; text-align: right; color: #6B6B73">{{l.n}}</span><span><template data-sc="for" list="{{l.seg}}" as="s" hint-placeholder-count="3"><span style="color: {{s.c}}">{{s.t}}</span></template></span></div>
+</template>
+</div>
+</section>
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<section style="flex: 1 1 300px; background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 8px; font-size: 13px">
+<h3 style="margin: 0 0 4px; font-size: 14px; font-weight: 600">Validation checks</h3>
+<template data-sc="for" list="{{checks}}" as="c" hint-placeholder-count="6"><div style="display: flex; gap: 8px; align-items: flex-start"><span style="font-weight: 700; color: {{c.color}}; width: 44px; flex: none">{{c.mark}}</span><span>{{c.text}}</span></div></template>
+</section>
+<section style="flex: 1 1 300px; background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 8px; font-size: 13px">
+<h3 style="margin: 0 0 4px; font-size: 14px; font-weight: 600">Model assumptions to confirm</h3>
+<label style="display: flex; gap: 8px; align-items: flex-start"><input type="checkbox" style="accent-color: {{accent}}; width: 18px; height: 18px; flex: none">The link text is exactly "Forgot password?"</label>
+<label style="display: flex; gap: 8px; align-items: flex-start"><input type="checkbox" style="accent-color: {{accent}}; width: 18px; height: 18px; flex: none">A mailbox fixture can read test inbox links</label>
+<label style="display: flex; gap: 8px; align-items: flex-start"><input type="checkbox" style="accent-color: {{accent}}; width: 18px; height: 18px; flex: none">Step 2 locator was healed from #email to getByLabel('Email') on attempt 2</label>
+<span style="font-size: 12px; color: #55555D">Model claude-sonnet · prompt v12 · 14.2k tokens</span>
+</section>
+</div>
+
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 16px; display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end">
+<label style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Review comment<textarea rows="2" placeholder="Optional for approval, required for rejection" style="padding: 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400; resize: vertical"></textarea></label>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<button type="button" style="min-height: 44px; padding: 0 16px; border-radius: 8px; border: 1px solid {{accent}}; background: #FFFFFF; color: #A00C25; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Reject</button>
+<a href="scripts.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 8px; border: 1px solid #111113; color: #111113; text-decoration: none; font-size: 14px; font-weight: 600">Edit in script editor</a>
+<button type="button" style="min-height: 44px; padding: 0 20px; border-radius: 8px; border: 0; background: {{accent}}; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Approve and commit</button>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+</div>
+</template>
+<script type="text/plain" id="logic">
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#C8102E';
+    const mode = (this.state && this.state.mode) || 'case';
+    const modeList = [['case', 'From test case'], ['rec', 'From recording'], ['url', 'From URL'], ['req', 'From requirement'], ['mob', 'Mobile (Appium)']];
+    const tok = (line) => {
+      const out = [];
+      const re = /('[^']*')|\b(import|from|const|new|await|async)\b/g;
+      let last = 0, m;
+      while ((m = re.exec(line))) {
+        if (m.index > last) out.push({ t: line.slice(last, m.index), c: '#ECECEE' });
+        out.push({ t: m[0], c: m[1] ? '#F7B4C0' : '#FF6B83' });
+        last = re.lastIndex;
+      }
+      if (last < line.length) out.push({ t: line.slice(last), c: '#ECECEE' });
+      if (!out.length) out.push({ t: ' ', c: '#ECECEE' });
+      return out;
+    };
+    const src = [
+      "test('User can reset password by email link',",
+      "  { tag: ['@auth'], annotation: { type: 'utp', description: 'TC-1050' } },",
+      "  async ({ page, mailbox }) => {",
+      "    const login = new LoginPage(page);",
+      "    await test.step('Open Forgot password', async () => {",
+      "      await login.goto();",
+      "      await page.getByRole('link', { name: 'Forgot password?' }).click();",
+      "    });",
+      "    await test.step('Submit the account email', async () => {",
+      "      await page.getByLabel('Email').fill(process.env.USER_RESET_EMAIL!);",
+      "      await page.getByRole('button', { name: 'Send reset link' }).click();",
+      "      await expect(page.getByText('Check your inbox')).toBeVisible();",
+      "    });",
+      "    await test.step('Open the reset link', async () => {",
+      "      await page.goto(await mailbox.latestLink('Reset your password'));",
+      "      await expect(page.getByLabel('New password')).toBeVisible();",
+      "    });",
+      "  });"
+    ];
+    const ok = (text) => ({ mark: 'PASS', color: '#165C38', text });
+    return {
+      accent,
+      modes: modeList.map(([id, label]) => ({ label, sel: id === mode ? 'true' : 'false', bg: id === mode ? '#0B0B0D' : 'transparent', fg: id === mode ? '#FFFFFF' : '#111113', pick: () => this.setState({ mode: id }) })),
+      queue: [
+        { key: 'TC-1050', title: 'Reset password by email link', status: 'Ready for review', sc: '#A00C25', border: '2px solid ' + accent },
+        { key: 'TC-2088', title: 'Login on mobile app (Appium)', status: 'Ready for review', sc: '#A00C25', border: '1px solid #E4E4E7' },
+        { key: 'TC-1060', title: 'Account locks after 5 attempts', status: 'Dry run in progress', sc: '#3F3F46', border: '1px solid #E4E4E7' },
+        { key: 'TC-0870', title: 'Guest checkout with card', status: 'Needs manual work', sc: '#8A5300', border: '1px solid #E4E4E7' },
+        { key: 'REQ-115', title: 'Suggest cases for SSO', status: '6 draft cases created', sc: '#165C38', border: '1px solid #E4E4E7' }
+      ],
+      steps: [
+        { n: 1, action: 'Open login page and click Forgot password', expected: 'Reset form is shown', lines: '5 to 8' },
+        { n: 2, action: 'Enter the account email and submit', expected: 'Confirmation message shown', lines: '9 to 13' },
+        { n: 3, action: 'Open the reset link from the email', expected: 'New password form is shown', lines: '14 to 17' }
+      ],
+      code: src.map((s, i) => ({ n: i + 1, seg: tok(s), hl: (i + 1 === 10) ? '#3A0A14' : 'transparent' })),
+      checks: [
+        ok('TypeScript compile, no errors'),
+        ok('ESLint with Playwright plugin, 0 warnings'),
+        ok('Only allowed imports used'),
+        ok('No hard-coded URLs, passwords or tokens'),
+        ok('Every case step mapped to a test.step'),
+        ok('Dry run on staging, Chromium: passed in 4.1 s'),
+        { mark: 'FIXED', color: '#8A5300', text: 'Attempt 1 failed: locator #email not found; repaired on attempt 2' }
+      ]
+    };
+  }
+}
+</script>
+<script type="application/json" id="props">{"accent": "#C8102E"}</script>
+</body>
+</html>

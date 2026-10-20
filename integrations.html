@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UTP Integrations and settings</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#B0102A}a:hover{color:#7A0A1C}
+</style>
+<style>:focus-visible{outline:3px solid #C8102E;outline-offset:2px}</style>
+<script src="runtime.js" defer></script>
+</head>
+<body>
+<div id="app"></div>
+<template id="tpl">
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; color: #111113; background: #F5F5F6">
+
+<nav aria-label="Main" style="flex: 1 1 240px; max-width: 100%; box-sizing: border-box; background: #0B0B0D; color: #FFFFFF; padding: 20px 16px; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; align-items: center; gap: 10px; padding: 0 8px">
+<div style="width: 32px; height: 32px; border-radius: 8px; background: {{accent}}; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px">U</div>
+<div style="display: flex; flex-direction: column"><span style="font-weight: 700; font-size: 16px; letter-spacing: 0.02em">UTP</span><span style="font-size: 11px; color: #A1A1A8">Unified Test Platform</span></div>
+</div>
+<button type="button" style="display: flex; align-items: center; justify-content: space-between; min-height: 44px; padding: 0 12px; border-radius: 8px; border: 1px solid #2A2A2F; background: #141417; color: #FFFFFF; font: inherit; font-size: 13px; cursor: pointer">Project: Customer Portal<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 0 12px 6px">TEST MANAGEMENT</span>
+<a href="index.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg></span>Dashboard</a>
+<a href="requirements.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg></span>Requirements</a>
+<a href="test-case.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 12l3 3 5-6"></path></svg></span>Test Cases</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">AUTOMATION</span>
+<a href="scripts.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"></path></svg></span>Scripts</a>
+<a href="ai-studio.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"></path></svg></span>AI Studio</a>
+<a href="recorder.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></span>Recorder</a>
+<a href="object-repository.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg></span>Object Repository</a>
+<a href="framework-export.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg></span>Framework Export</a>
+<a href="api-testing.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1M16 3h1a2 2 0 0 1 2 2v5a2 2 0 0 0 2 2 2 2 0 0 0-2 2v5a2 2 0 0 1-2 2h-1"/></svg></span>API Testing</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">EXECUTION</span>
+<a href="new-run.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 4l14 8-14 8z"></path></svg></span>New Run</a>
+<a href="results.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg></span>Results</a>
+<a href="devices.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"></rect><path d="M11 18h2"></path></svg></span>Devices</a>
+<a href="report-builder.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12A9 9 0 1 1 12 3v9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/></svg></span>Reports</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">ADMIN</span>
+<a href="integrations.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #FFFFFF; background: #222226; text-decoration: none; font-size: 14px; font-weight: 600"><span style="display: flex; color: {{accent}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"></path></svg></span>Integrations</a>
+</div>
+<div style="margin-top: auto; display: flex; align-items: center; gap: 10px; padding: 12px; border-top: 1px solid #222226">
+<div style="width: 32px; height: 32px; border-radius: 50%; background: #FFFFFF; color: #0B0B0D; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700">QL</div>
+<div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">QA Lead</span><span style="font-size: 11px; color: #A1A1A8">Admin access</span></div>
+</div>
+</nav>
+
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column">
+<div style="padding: 28px 32px 40px; display: flex; flex-direction: column; gap: 18px; max-width: 1280px; box-sizing: border-box; width: 100%">
+<div><h1 style="margin: 0; font-size: 28px; font-weight: 700">Integrations and settings</h1><p style="margin: 4px 0 0; font-size: 14px; color: #55555D">Connections, environments, AI controls and access for Customer Portal</p></div>
+
+<div role="tablist" aria-label="Settings sections" style="display: flex; flex-wrap: wrap; gap: 4px; border-bottom: 1px solid #E4E4E7">
+<button type="button" role="tab" aria-selected="true" style="min-height: 44px; padding: 0 16px; border: 0; border-bottom: 3px solid {{accent}}; background: transparent; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer">Integrations</button>
+<button type="button" role="tab" aria-selected="false" style="min-height: 44px; padding: 0 16px; border: 0; background: transparent; color: #55555D; font: inherit; font-size: 14px; cursor: pointer">Environments</button>
+<button type="button" role="tab" aria-selected="false" style="min-height: 44px; padding: 0 16px; border: 0; background: transparent; color: #55555D; font: inherit; font-size: 14px; cursor: pointer">AI settings</button>
+<button type="button" role="tab" aria-selected="false" style="min-height: 44px; padding: 0 16px; border: 0; background: transparent; color: #55555D; font: inherit; font-size: 14px; cursor: pointer">Users and roles</button>
+<button type="button" role="tab" aria-selected="false" style="min-height: 44px; padding: 0 16px; border: 0; background: transparent; color: #55555D; font: inherit; font-size: 14px; cursor: pointer">API tokens and webhooks</button>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px">
+<template data-sc="for" list="{{integrations}}" as="i" hint-placeholder-count="8">
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: center; gap: 12px"><span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 8px; background: #0B0B0D; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px">{{i.mono}}</span><div style="display: flex; flex-direction: column"><span style="font-weight: 700; font-size: 14px">{{i.name}}</span><span style="font-size: 12px; color: #55555D">{{i.kind}}</span></div></div>
+<p style="margin: 0; font-size: 13px; color: #3F3F46">{{i.desc}}</p>
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto"><span style="padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; background: {{i.bg}}; color: {{i.fg}}">{{i.status}}</span><button type="button" style="min-height: 36px; padding: 0 12px; border-radius: 8px; border: {{i.btnBorder}}; background: {{i.btnBg}}; color: {{i.btnFg}}; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">{{i.action}}</button></div>
+</section>
+</template>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+<section style="flex: 1 1 380px; background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">AI settings</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Provider<select style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400; background: #FFFFFF"><option>Anthropic Claude</option><option>Other provider</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Monthly token budget<input value="20,000,000" style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400"></label>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px"><div style="display: flex; justify-content: space-between; font-size: 13px"><span>Used this month</span><span style="font-weight: 600">6.4M of 20M</span></div><div style="height: 8px; border-radius: 4px; background: #EEEEF0; overflow: hidden"><div style="width: 32%; height: 8px; background: #111113"></div></div></div>
+<label style="display: flex; align-items: center; gap: 10px; font-size: 13px"><input type="checkbox" checked="" style="accent-color: {{accent}}; width: 18px; height: 18px">Redact PII and secrets before any AI call</label>
+<label style="display: flex; align-items: center; gap: 10px; font-size: 13px"><input type="checkbox" checked="" style="accent-color: {{accent}}; width: 18px; height: 18px">Require human approval for AI scripts</label>
+<label style="display: flex; align-items: center; gap: 10px; font-size: 13px"><input type="checkbox" style="accent-color: {{accent}}; width: 18px; height: 18px">Allow locator self-healing PRs</label>
+<button type="button" style="align-self: flex-start; min-height: 44px; padding: 0 18px; border-radius: 8px; border: 0; background: {{accent}}; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Save AI settings</button>
+</section>
+
+<section style="flex: 1 1 460px; min-width: 0; background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center"><h2 style="margin: 0; font-size: 16px; font-weight: 600">Environments</h2><button type="button" style="min-height: 36px; padding: 0 12px; border-radius: 8px; border: 1px solid #111113; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Add environment</button></div>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 460px; border-collapse: collapse; font-size: 13px">
+<thead><tr style="text-align: left; color: #55555D; border-bottom: 1px solid #E4E4E7"><th style="padding: 8px; font-weight: 600">Name</th><th style="padding: 8px; font-weight: 600">Base URL</th><th style="padding: 8px; font-weight: 600">Secrets</th><th style="padding: 8px; font-weight: 600">BrowserStack Local</th></tr></thead>
+<tbody>
+<tr style="border-bottom: 1px solid #EEEEF0"><td style="padding: 10px 8px; font-weight: 600">staging</td><td style="padding: 10px 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px">[STAGING_BASE_URL]</td><td style="padding: 10px 8px">8 in Vault</td><td style="padding: 10px 8px">Tunnel on</td></tr>
+<tr style="border-bottom: 1px solid #EEEEF0"><td style="padding: 10px 8px; font-weight: 600">qa</td><td style="padding: 10px 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px">[QA_BASE_URL]</td><td style="padding: 10px 8px">8 in Vault</td><td style="padding: 10px 8px">Tunnel on</td></tr>
+<tr><td style="padding: 10px 8px; font-weight: 600">production-readonly</td><td style="padding: 10px 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px">[PROD_BASE_URL]</td><td style="padding: 10px 8px">2 in Vault</td><td style="padding: 10px 8px">Off</td></tr>
+</tbody>
+</table>
+</div>
+<p style="margin: 0; font-size: 12px; color: #55555D">Secret values are never shown here; scripts read them by name at run time.</p>
+</section>
+</div>
+</div>
+</main>
+</div>
+</template>
+<script type="text/plain" id="logic">
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#C8102E';
+    const on = { status: 'Connected', bg: '#E7F4EC', fg: '#165C38', action: 'Configure', btnBorder: '1px solid #D4D4D8', btnBg: '#FFFFFF', btnFg: '#111113' };
+    const off = { status: 'Not connected', bg: '#EEEEF0', fg: '#3F3F46', action: 'Connect', btnBorder: '0', btnBg: accent, btnFg: '#FFFFFF' };
+    const it = (mono, name, kind, desc, state) => ({ mono, name, kind, desc, ...state });
+    return {
+      accent,
+      integrations: [
+        it('BS', 'BrowserStack', 'Device cloud', 'Automate for Playwright, App Automate for Appium, Local tunnel for staging.', on),
+        it('JI', 'Jira Cloud', 'Issue tracking', 'Sync stories as requirements and raise defects from failed results.', on),
+        it('GH', 'GitHub', 'Source control and CI', 'Script repo sync, framework export through pull requests, and the UTP run action.', on),
+        it('AI', 'Anthropic Claude', 'LLM provider', 'Script generation, failure analysis and test case suggestions.', on),
+        it('SL', 'Slack', 'Notifications', 'Run completion and pass-rate alerts to team channels.', on),
+        it('VA', 'HashiCorp Vault', 'Secrets', 'Environment credentials and integration keys, read at run time.', on),
+        it('ID', 'Single sign-on', 'OIDC / SAML', 'Company identity provider with group-to-role mapping.', on),
+        it('PM', 'Postman', 'API workspace sync', 'Pull and push collections and environments through the Postman API.', off),
+        it('MT', 'Microsoft Teams', 'Notifications', 'Post run summaries to Teams channels.', off)
+      ]
+    };
+  }
+}
+</script>
+<script type="application/json" id="props">{"accent": "#C8102E"}</script>
+</body>
+</html>

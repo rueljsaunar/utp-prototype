@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UTP Recorder</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#B0102A}a:hover{color:#7A0A1C}
+</style>
+<style>:focus-visible{outline:3px solid #C8102E;outline-offset:2px}</style>
+<script src="runtime.js" defer></script>
+</head>
+<body>
+<div id="app"></div>
+<template id="tpl">
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; color: #111113; background: #F5F5F6">
+
+<nav aria-label="Main" style="flex: 1 1 240px; max-width: 100%; box-sizing: border-box; background: #0B0B0D; color: #FFFFFF; padding: 20px 16px; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; align-items: center; gap: 10px; padding: 0 8px">
+<div style="width: 32px; height: 32px; border-radius: 8px; background: {{accent}}; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px">U</div>
+<div style="display: flex; flex-direction: column"><span style="font-weight: 700; font-size: 16px; letter-spacing: 0.02em">UTP</span><span style="font-size: 11px; color: #A1A1A8">Unified Test Platform</span></div>
+</div>
+<button type="button" style="display: flex; align-items: center; justify-content: space-between; min-height: 44px; padding: 0 12px; border-radius: 8px; border: 1px solid #2A2A2F; background: #141417; color: #FFFFFF; font: inherit; font-size: 13px; cursor: pointer">Project: Customer Portal<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 0 12px 6px">TEST MANAGEMENT</span>
+<a href="index.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span>Dashboard</a>
+<a href="requirements.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></span>Requirements</a>
+<a href="test-case.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg></span>Test Cases</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">AUTOMATION</span>
+<a href="scripts.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span>Scripts</a>
+<a href="ai-studio.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></span>AI Studio</a>
+<a href="recorder.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #FFFFFF; background: #222226; text-decoration: none; font-size: 14px; font-weight: 600"><span style="display: flex; color: {{accent}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></span>Recorder</a>
+<a href="object-repository.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg></span>Object Repository</a>
+<a href="framework-export.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg></span>Framework Export</a>
+<a href="api-testing.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1M16 3h1a2 2 0 0 1 2 2v5a2 2 0 0 0 2 2 2 2 0 0 0-2 2v5a2 2 0 0 1-2 2h-1"/></svg></span>API Testing</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">EXECUTION</span>
+<a href="new-run.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></span>New Run</a>
+<a href="results.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>Results</a>
+<a href="devices.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span>Devices</a>
+<a href="report-builder.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12A9 9 0 1 1 12 3v9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/></svg></span>Reports</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">ADMIN</span>
+<a href="integrations.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></span>Integrations</a>
+</div>
+<div style="margin-top: auto; display: flex; align-items: center; gap: 10px; padding: 12px; border-top: 1px solid #222226">
+<div style="width: 32px; height: 32px; border-radius: 50%; background: #FFFFFF; color: #0B0B0D; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700">QL</div>
+<div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">QA Lead</span><span style="font-size: 11px; color: #A1A1A8">Admin access</span></div>
+</div>
+</nav>
+
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column">
+<header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 24px; background: #0B0B0D; color: #FFFFFF">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px">
+<span style="display: flex; align-items: center; gap: 8px; font-weight: 700"><span style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}"></span>Recording</span>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #C4C4CA">02:14</span>
+<span style="font-size: 13px; color: #C4C4CA">Chromium · staging · in-browser mode</span>
+</div>
+<div role="radiogroup" aria-label="Recorder mode" style="display: flex; gap: 4px; padding: 4px; border-radius: 8px; background: #1A1A1D">
+<template data-sc="for" list="{{modes}}" as="m" hint-placeholder-count="3"><button type="button" role="radio" aria-checked="{{m.on}}" onClick="{{m.pick}}" style="min-height: 36px; padding: 0 14px; border-radius: 6px; border: 0; background: {{m.bg}}; color: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">{{m.label}}</button></template>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<button type="button" style="min-height: 40px; padding: 0 14px; border-radius: 8px; border: 1px solid #3F3F46; background: transparent; color: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Pause</button>
+<button type="button" style="min-height: 40px; padding: 0 16px; border-radius: 8px; border: 0; background: {{accent}}; color: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Stop and save</button>
+</div>
+</header>
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; padding: 20px 24px 32px; align-items: flex-start">
+<div style="flex: 3 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<section aria-label="Application under test" style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; overflow: hidden">
+<div style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid #E4E4E7; background: #F5F5F6">
+<span style="display: flex; gap: 6px" aria-hidden="true"><span style="width: 10px; height: 10px; border-radius: 50%; background: #D4D4D8"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #D4D4D8"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #D4D4D8"></span></span>
+<label style="flex: 1; display: flex"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Address</span><input value="[STAGING_BASE_URL]/login" style="flex: 1; min-height: 32px; padding: 0 12px; border: 1px solid #D4D4D8; border-radius: 999px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: #FFFFFF"></label>
+</div>
+<div style="position: relative; height: 420px; display: flex; align-items: center; justify-content: center; background: #FAFAFA">
+<div style="width: 340px; display: flex; flex-direction: column; gap: 14px; padding: 28px; background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 12px">
+<div style="font-size: 20px; font-weight: 700">Sign in</div>
+<div style="display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: #3F3F46">Email<div style="min-height: 38px; border: 1px solid #D4D4D8; border-radius: 6px; padding: 0 10px; display: flex; align-items: center; font-size: 13px; color: #111113">[test user email]</div></div>
+<div style="display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: #3F3F46">Password<div style="min-height: 38px; border: 1px solid #D4D4D8; border-radius: 6px; padding: 0 10px; display: flex; align-items: center; font-size: 13px">••••••••</div></div>
+<div style="position: relative">
+<div style="min-height: 42px; border-radius: 6px; background: #111113; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; outline: 3px solid {{accent}}; outline-offset: 3px">Sign in</div>
+<div style="position: absolute; left: -20px; top: 56px; width: 380px; box-sizing: border-box; padding: 10px 12px; border-radius: 8px; background: #0B0B0D; color: #FFFFFF; font-size: 12px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'IBM Plex Mono', monospace">getByRole('button', { name: 'Sign in' })</span>
+<span style="color: #9EE2B8">Unique · 1 match · saved as LoginPage.signInButton</span>
+<span style="color: #C4C4CA">Alternatives: getByTestId('sign-in') · form#login button</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-label="Live code" style="background: #0B0B0D; border-radius: 10px; overflow: hidden">
+<div role="tablist" aria-label="Output language" style="display: flex; gap: 2px; padding: 0 8px; background: #141417; border-bottom: 1px solid #222226">
+<template data-sc="for" list="{{langs}}" as="l" hint-placeholder-count="3"><button type="button" role="tab" aria-selected="{{l.on}}" onClick="{{l.pick}}" style="min-height: 40px; padding: 0 14px; border: 0; border-bottom: {{l.border}}; background: transparent; color: {{l.fg}}; font-family: 'IBM Plex Mono', monospace; font-size: 12px; cursor: pointer">{{l.label}}</button></template>
+</div>
+<div style="padding: 14px 0; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; line-height: 21px; overflow-x: auto">
+<template data-sc="for" list="{{code}}" as="c" hint-placeholder-count="10"><div style="display: flex; white-space: pre"><span style="width: 40px; flex: none; padding-right: 14px; text-align: right; color: #6B6B73">{{c.n}}</span><span style="color: {{c.color}}">{{c.t}}</span></div></template>
+</div>
+</section>
+</div>
+
+<aside style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; align-items: center"><h2 style="margin: 0; font-size: 14px; font-weight: 600">Recorded steps</h2><span style="font-size: 12px; color: #55555D">6 actions</span></div>
+<template data-sc="for" list="{{steps}}" as="s" hint-placeholder-count="6">
+<div style="display: flex; gap: 10px; align-items: flex-start; padding: 10px; border-radius: 8px; background: {{s.bg}}">
+<span style="width: 22px; height: 22px; flex: none; border-radius: 50%; background: #111113; color: #FFFFFF; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center">{{s.n}}</span>
+<div style="flex: 1; min-width: 0; font-size: 13px"><div><span style="font-weight: 700">{{s.action}}</span> <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px">{{s.target}}</span></div><div style="font-size: 12px; color: #55555D">{{s.data}}</div></div>
+<button type="button" aria-label="Delete step" style="width: 32px; height: 32px; border: 0; border-radius: 6px; background: transparent; color: #55555D; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+</div>
+</template>
+</section>
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 8px; font-size: 13px">
+<h2 style="margin: 0; font-size: 14px; font-weight: 600">Pages captured</h2>
+<a href="object-repository.html" style="display: flex; justify-content: space-between; padding: 10px; border-radius: 8px; background: #F5F5F6; color: #111113; text-decoration: none"><span style="font-weight: 600">LoginPage</span><span style="color: #55555D">8 elements · 2 new</span></a>
+<a href="object-repository.html" style="display: flex; justify-content: space-between; padding: 10px; border-radius: 8px; background: #F5F5F6; color: #111113; text-decoration: none"><span style="font-weight: 600">DashboardPage</span><span style="color: #55555D">14 elements · 1 new</span></a>
+<span style="font-size: 12px; color: #55555D">Snapshots are redacted before storage; the password field was masked.</span>
+</section>
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<h2 style="margin: 0; font-size: 14px; font-weight: 600">Save recording as</h2>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 13px"><input type="radio" name="saveas" checked style="accent-color: {{accent}}; width: 18px; height: 18px">New test case with steps</label>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 13px"><input type="radio" name="saveas" style="accent-color: {{accent}}; width: 18px; height: 18px">Append steps to TC-1042</label>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 13px"><input type="radio" name="saveas" style="accent-color: {{accent}}; width: 18px; height: 18px">Script draft only</label>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 13px"><input type="checkbox" checked style="accent-color: {{accent}}; width: 18px; height: 18px">Update Object Repository</label>
+</section>
+</aside>
+</div>
+</main>
+</div>
+</template>
+<script type="text/plain" id="logic">
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#C8102E';
+    const st = this.state || {};
+    const mode = st.mode || 'record';
+    const lang = st.lang || 'pytest';
+    const CODE = {
+      ts: [
+        "test('User can log in', async ({ page }) => {",
+        "  const loginPage = new LoginPage(page);",
+        "  await loginPage.open();",
+        "  await loginPage.emailInput.fill(users.standard.email);",
+        "  await loginPage.passwordInput.fill(users.standard.password);",
+        "  await loginPage.signInButton.click();",
+        "  await expect(dashboardPage.userName).toBeVisible();",
+        "});"
+      ],
+      pytest: [
+        "def test_user_can_log_in(page, users):",
+        "    login_page = LoginPage(page)",
+        "    login_page.open()",
+        "    login_page.email_input.fill(users.standard.email)",
+        "    login_page.password_input.fill(users.standard.password)",
+        "    login_page.sign_in_button.click()",
+        "    expect(DashboardPage(page).user_name).to_be_visible()"
+      ],
+      behave: [
+        "Feature: Authentication",
+        "  Scenario: User can log in",
+        "    Given the user is on the login page",
+        "    When the user enters the email of \"standard\"",
+        "    And the user enters the password of \"standard\"",
+        "    And the user clicks \"Sign in\"",
+        "    Then \"user name\" is visible"
+      ]
+    };
+    const langList = [['ts', 'Playwright TS'], ['pytest', 'Python · pytest'], ['behave', 'Python · behave']];
+    const modeList = [['record', 'Record'], ['assert', 'Assert'], ['pick', 'Pick locator']];
+    return {
+      accent,
+      modes: modeList.map(([id, label]) => ({ label, on: id === mode ? 'true' : 'false', bg: id === mode ? accent : 'transparent', pick: () => this.setState({ mode: id }) })),
+      langs: langList.map(([id, label]) => ({ label, on: id === lang ? 'true' : 'false', fg: id === lang ? '#FFFFFF' : '#A1A1A8', border: id === lang ? '2px solid ' + accent : '2px solid transparent', pick: () => this.setState({ lang: id }) })),
+      code: CODE[lang].map((t, i) => ({ n: i + 1, t, color: '#ECECEE' })),
+      steps: [
+        { n: 1, action: 'Navigate', target: '/login', data: 'LoginPage', bg: '#F5F5F6' },
+        { n: 2, action: 'Fill', target: 'LoginPage.emailInput', data: 'Data: {{users.standard.email}}', bg: '#F5F5F6' },
+        { n: 3, action: 'Fill', target: 'LoginPage.passwordInput', data: 'Masked · {{users.standard.password}}', bg: '#F5F5F6' },
+        { n: 4, action: 'Click', target: 'LoginPage.signInButton', data: 'Locator verified unique', bg: '#FDF3F5' },
+        { n: 5, action: 'Assert visible', target: 'DashboardPage.userName', data: 'Added in assert mode', bg: '#F5F5F6' },
+        { n: 6, action: 'Assert URL', target: '/dashboard', data: 'Matches pattern', bg: '#F5F5F6' }
+      ]
+    };
+  }
+}
+</script>
+<script type="application/json" id="props">{"accent": "#C8102E"}</script>
+</body>
+</html>

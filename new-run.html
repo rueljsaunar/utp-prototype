@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UTP New run</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#B0102A}a:hover{color:#7A0A1C}
+</style>
+<style>:focus-visible{outline:3px solid #C8102E;outline-offset:2px}</style>
+<script src="runtime.js" defer></script>
+</head>
+<body>
+<div id="app"></div>
+<template id="tpl">
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; color: #111113; background: #F5F5F6">
+
+<nav aria-label="Main" style="flex: 1 1 240px; max-width: 100%; box-sizing: border-box; background: #0B0B0D; color: #FFFFFF; padding: 20px 16px; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; align-items: center; gap: 10px; padding: 0 8px">
+<div style="width: 32px; height: 32px; border-radius: 8px; background: {{accent}}; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px">U</div>
+<div style="display: flex; flex-direction: column"><span style="font-weight: 700; font-size: 16px; letter-spacing: 0.02em">UTP</span><span style="font-size: 11px; color: #A1A1A8">Unified Test Platform</span></div>
+</div>
+<button type="button" style="display: flex; align-items: center; justify-content: space-between; min-height: 44px; padding: 0 12px; border-radius: 8px; border: 1px solid #2A2A2F; background: #141417; color: #FFFFFF; font: inherit; font-size: 13px; cursor: pointer">Project: Customer Portal<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 0 12px 6px">TEST MANAGEMENT</span>
+<a href="index.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg></span>Dashboard</a>
+<a href="requirements.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg></span>Requirements</a>
+<a href="test-case.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 12l3 3 5-6"></path></svg></span>Test Cases</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">AUTOMATION</span>
+<a href="scripts.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"></path></svg></span>Scripts</a>
+<a href="ai-studio.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"></path></svg></span>AI Studio</a>
+<a href="recorder.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></span>Recorder</a>
+<a href="object-repository.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg></span>Object Repository</a>
+<a href="framework-export.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg></span>Framework Export</a>
+<a href="api-testing.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1M16 3h1a2 2 0 0 1 2 2v5a2 2 0 0 0 2 2 2 2 0 0 0-2 2v5a2 2 0 0 1-2 2h-1"/></svg></span>API Testing</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">EXECUTION</span>
+<a href="new-run.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #FFFFFF; background: #222226; text-decoration: none; font-size: 14px; font-weight: 600"><span style="display: flex; color: {{accent}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 4l14 8-14 8z"></path></svg></span>New Run</a>
+<a href="results.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg></span>Results</a>
+<a href="devices.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"></rect><path d="M11 18h2"></path></svg></span>Devices</a>
+<a href="report-builder.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12A9 9 0 1 1 12 3v9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/></svg></span>Reports</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">ADMIN</span>
+<a href="integrations.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"></path></svg></span>Integrations</a>
+</div>
+<div style="margin-top: auto; display: flex; align-items: center; gap: 10px; padding: 12px; border-top: 1px solid #222226">
+<div style="width: 32px; height: 32px; border-radius: 50%; background: #FFFFFF; color: #0B0B0D; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700">QL</div>
+<div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">QA Lead</span><span style="font-size: 11px; color: #A1A1A8">Admin access</span></div>
+</div>
+</nav>
+
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column">
+<div style="padding: 28px 32px 40px; display: flex; flex-direction: column; gap: 18px; max-width: 1280px; box-sizing: border-box; width: 100%">
+<div><h1 style="margin: 0; font-size: 28px; font-weight: 700">New run</h1><p style="margin: 4px 0 0; font-size: 14px; color: #55555D">Choose what to run, where it runs, and how results are captured</p></div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+<div style="flex: 3 1 600px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">1 · What to run</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Run name<input value="Nightly regression" style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Test plan<select style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400; background: #FFFFFF"><option>Release 4.2 regression</option><option>Smoke</option><option>Custom selection</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Tags<input value="@regression" style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 400"></label>
+</div>
+<p style="margin: 0; font-size: 13px; color: #55555D"><strong style="color: #111113">{{count}}</strong> automated tests selected · only approved scripts are included</p>
+</section>
+
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">2 · Platform and target</h2>
+<div role="radiogroup" aria-label="Platform" style="display: flex; gap: 8px">
+<button type="button" role="radio" aria-checked="{{webOn}}" onClick="{{pickWeb}}" style="min-height: 44px; padding: 0 20px; border-radius: 8px; border: 1px solid #111113; background: {{webBg}}; color: {{webFg}}; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Web · Playwright</button>
+<button type="button" role="radio" aria-checked="{{mobOn}}" onClick="{{pickMobile}}" style="min-height: 44px; padding: 0 20px; border-radius: 8px; border: 1px solid #111113; background: {{mobBg}}; color: {{mobFg}}; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Mobile · Appium</button>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px">
+<template data-sc="for" list="{{targets}}" as="t" hint-placeholder-count="2">
+<button type="button" onClick="{{t.pick}}" aria-pressed="{{t.on}}" style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding: 16px; border-radius: 10px; border: {{t.border}}; background: #FFFFFF; font: inherit; text-align: left; cursor: pointer"><span style="font-size: 14px; font-weight: 700">{{t.name}}</span><span style="font-size: 13px; color: #55555D">{{t.desc}}</span><span style="font-size: 12px; font-weight: 600; color: #3F3F46">{{t.cap}}</span></button>
+</template>
+</div>
+</section>
+
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<template data-sc="if" value="{{isWeb}}" hint-placeholder-val="{{ true }}">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">3 · Browsers</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<label style="display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border: 1px solid #D4D4D8; border-radius: 8px; font-size: 14px"><input type="checkbox" checked="" style="accent-color: {{accent}}; width: 18px; height: 18px">Chromium</label>
+<label style="display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border: 1px solid #D4D4D8; border-radius: 8px; font-size: 14px"><input type="checkbox" checked="" style="accent-color: {{accent}}; width: 18px; height: 18px">Firefox</label>
+<label style="display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border: 1px solid #D4D4D8; border-radius: 8px; font-size: 14px"><input type="checkbox" checked="" style="accent-color: {{accent}}; width: 18px; height: 18px">WebKit</label>
+<label style="display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border: 1px solid #D4D4D8; border-radius: 8px; font-size: 14px"><input type="checkbox" style="accent-color: {{accent}}; width: 18px; height: 18px">Mobile Chrome emulation</label>
+</div>
+</template>
+<template data-sc="if" value="{{isMobile}}" hint-placeholder-val="{{ false }}">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">3 · App build and devices</h2>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46; max-width: 420px">App build<select style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400; background: #FFFFFF"><option>Android 4.2.0 (build 418) · app-release.apk</option><option>iOS 4.2.0 (build 418) · Portal.ipa</option></select></label>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px">
+<template data-sc="for" list="{{devices}}" as="d" hint-placeholder-count="4">
+<label style="display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 14px; border: 1px solid #D4D4D8; border-radius: 8px; font-size: 14px"><input type="checkbox" style="accent-color: {{accent}}; width: 18px; height: 18px"><span style="display: flex; flex-direction: column"><span style="font-weight: 600">{{d.name}}</span><span style="font-size: 12px; color: #55555D">{{d.meta}}</span></span></label>
+</template>
+</div>
+</template>
+</section>
+
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">4 · Settings</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Environment<select style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400; background: #FFFFFF"><option>staging</option><option>qa</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Git ref<input value="main" style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 400"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Shards<input type="number" value="4" style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Retries<input type="number" value="1" style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Trace<select style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400; background: #FFFFFF"><option>Retain on failure</option><option>Always on</option><option>Off</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Schedule<select style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400; background: #FFFFFF"><option>Run now</option><option>Nightly 01:00 Asia/Manila</option><option>Custom cron</option></select></label>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 18px; font-size: 13px">
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" checked="" style="accent-color: {{accent}}; width: 18px; height: 18px">Record video on failure</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" checked="" style="accent-color: {{accent}}; width: 18px; height: 18px">AI failure analysis</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" style="accent-color: {{accent}}; width: 18px; height: 18px">Locator self-healing (opens PR)</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" checked="" style="accent-color: {{accent}}; width: 18px; height: 18px">Notify Slack channel</label>
+</div>
+</section>
+</div>
+
+<aside aria-label="Run summary" style="flex: 1 1 300px; min-width: 0; background: #0B0B0D; color: #FFFFFF; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Summary</h2>
+<dl style="margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 8px 14px; font-size: 13px">
+<dt style="color: #A1A1A8">Tests</dt><dd style="margin: 0">{{count}}</dd>
+<dt style="color: #A1A1A8">Platform</dt><dd style="margin: 0">{{platformLabel}}</dd>
+<dt style="color: #A1A1A8">Target</dt><dd style="margin: 0">{{targetLabel}}</dd>
+<dt style="color: #A1A1A8">Jobs</dt><dd style="margin: 0">{{jobs}}</dd>
+<dt style="color: #A1A1A8">Est. time</dt><dd style="margin: 0">{{eta}}</dd>
+</dl>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; line-height: 18px; background: #1A1A1D; border-radius: 8px; padding: 12px; white-space: pre-wrap; color: #ECECEE">{{api}}</div>
+<button type="button" style="min-height: 40px; border-radius: 8px; border: 1px solid #3F3F46; background: transparent; color: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Copy as API call</button>
+<a href="results.html" style="display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; border-radius: 8px; background: {{accent}}; color: #FFFFFF; text-decoration: none; font-size: 15px; font-weight: 700"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 4l14 8-14 8z"></path></svg>Start run</a>
+</aside>
+</div>
+</div>
+</main>
+</div>
+</template>
+<script type="text/plain" id="logic">
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#C8102E';
+    const st = this.state || {};
+    const platform = st.platform || 'web';
+    const isWeb = platform === 'web';
+    const webTargets = [
+      { id: 'self', name: 'Self-hosted runners', desc: 'Kubernetes pods with Chromium, Firefox, WebKit', cap: '24 of 40 workers free' },
+      { id: 'bs', name: 'BrowserStack Automate', desc: 'Real desktop and mobile browsers in the cloud', cap: '5 of 10 parallel sessions free' }
+    ];
+    const mobTargets = [
+      { id: 'local', name: 'Local device lab', desc: 'Real devices attached to UTP Device Agents', cap: '6 devices available' },
+      { id: 'bsm', name: 'BrowserStack App Automate', desc: 'Real Android and iOS devices in the cloud', cap: '5 of 10 parallel sessions free' }
+    ];
+    const list = isWeb ? webTargets : mobTargets;
+    const target = (st.target && list.some((t) => t.id === st.target)) ? st.target : list[0].id;
+    const cur = list.find((t) => t.id === target);
+    const count = isWeb ? 148 : 42;
+    const api = isWeb
+      ? 'POST /api/v1/runs\n{ "type": "web", "target": "' + (target === 'bs' ? 'browserstack' : 'self-hosted') + '",\n  "browsers": ["chromium","firefox","webkit"],\n  "environment": "staging", "shards": 4 }'
+      : 'POST /api/v1/runs\n{ "type": "mobile", "target": "' + (target === 'local' ? 'local-agents' : 'browserstack') + '",\n  "build": "android-4.2.0-418",\n  "devices": ["Pixel 8", "Galaxy S24"] }';
+    return {
+      accent, isWeb, isMobile: !isWeb, count,
+      webOn: isWeb ? 'true' : 'false', mobOn: isWeb ? 'false' : 'true',
+      webBg: isWeb ? '#0B0B0D' : '#FFFFFF', webFg: isWeb ? '#FFFFFF' : '#111113',
+      mobBg: isWeb ? '#FFFFFF' : '#0B0B0D', mobFg: isWeb ? '#111113' : '#FFFFFF',
+      pickWeb: () => this.setState({ platform: 'web' }),
+      pickMobile: () => this.setState({ platform: 'mobile' }),
+      targets: list.map((t) => ({ ...t, on: t.id === target ? 'true' : 'false', border: t.id === target ? '2px solid ' + accent : '1px solid #D4D4D8', pick: () => this.setState({ target: t.id }) })),
+      devices: target === 'local'
+        ? [{ name: 'Pixel 8', meta: 'Android 14 · Lab agent MNL-01' }, { name: 'Galaxy S23', meta: 'Android 14 · Lab agent MNL-01' }, { name: 'Redmi Note 12', meta: 'Android 13 · Tester laptop' }, { name: 'iPhone 14', meta: 'iOS 17 · Mac agent MNL-02' }]
+        : [{ name: 'Samsung Galaxy S24', meta: 'Android 14 · BrowserStack' }, { name: 'Google Pixel 8', meta: 'Android 14 · BrowserStack' }, { name: 'iPhone 15', meta: 'iOS 17 · BrowserStack' }, { name: 'iPad Air 2022', meta: 'iPadOS 17 · BrowserStack' }],
+      platformLabel: isWeb ? 'Web · Playwright' : 'Mobile · Appium',
+      targetLabel: cur.name,
+      jobs: isWeb ? '12 (3 browsers × 4 shards)' : '2 devices × 6 files = 12',
+      eta: isWeb ? 'about 19 min' : 'about 25 min',
+      api
+    };
+  }
+}
+</script>
+<script type="application/json" id="props">{"accent": "#C8102E"}</script>
+</body>
+</html>
