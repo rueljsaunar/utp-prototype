@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UTP Framework Hub</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#B0102A}a:hover{color:#7A0A1C}
+</style>
+<style>:focus-visible{outline:3px solid #C8102E;outline-offset:2px}</style>
+<script src="runtime.js" defer></script>
+</head>
+<body>
+<div id="app"></div>
+<template id="tpl">
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; color: #111113; background: #F5F5F6">
+
+<nav aria-label="Main" style="flex: 1 1 240px; max-width: 100%; box-sizing: border-box; background: #0B0B0D; color: #FFFFFF; padding: 20px 16px; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; align-items: center; gap: 10px; padding: 0 8px">
+<div style="width: 32px; height: 32px; border-radius: 8px; background: {{accent}}; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px">U</div>
+<div style="display: flex; flex-direction: column"><span style="font-weight: 700; font-size: 16px; letter-spacing: 0.02em">UTP</span><span style="font-size: 11px; color: #A1A1A8">Unified Test Platform</span></div>
+</div>
+<button type="button" style="display: flex; align-items: center; justify-content: space-between; min-height: 44px; padding: 0 12px; border-radius: 8px; border: 1px solid #2A2A2F; background: #141417; color: #FFFFFF; font: inherit; font-size: 13px; cursor: pointer">Project: Customer Portal<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 0 12px 6px">TEST MANAGEMENT</span>
+<a href="index.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg></span>Dashboard</a>
+<a href="requirements.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg></span>Requirements</a>
+<a href="test-case.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 12l3 3 5-6"></path></svg></span>Test Cases</a>
+<a href="test-data.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path></svg></span>Test Data</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">AUTOMATION</span>
+<a href="scripts.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"></path></svg></span>Scripts</a>
+<a href="ai-studio.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"></path></svg></span>AI Studio</a>
+<a href="recorder.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle></svg></span>Recorder</a>
+<a href="object-repository.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"></path><path d="M12 22V12M21 7l-9 5-9-5"></path></svg></span>Object Repository</a>
+<a href="framework-hub.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #FFFFFF; background: #222226; text-decoration: none; font-size: 14px; font-weight: 600"><span style="display: flex; color: {{accent}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 20V4M3 8l4-4 4 4M17 4v16M13 16l4 4 4-4"></path></svg></span>Framework Hub</a>
+<a href="api-testing.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1M16 3h1a2 2 0 0 1 2 2v5a2 2 0 0 0 2 2 2 2 0 0 0-2 2v5a2 2 0 0 1-2 2h-1"></path></svg></span>API Testing</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">EXECUTION</span>
+<a href="new-run.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 4l14 8-14 8z"></path></svg></span>New Run</a>
+<a href="results.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg></span>Results</a>
+<a href="devices.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"></rect><path d="M11 18h2"></path></svg></span>Devices</a>
+<a href="report-builder.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12A9 9 0 1 1 12 3v9z"></path><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"></path></svg></span>Reports</a>
+<span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #8E8E96; padding: 14px 12px 6px">ADMIN</span>
+<a href="integrations.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #C4C4CA; text-decoration: none; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"></path></svg></span>Integrations</a>
+</div>
+<div style="margin-top: auto; display: flex; align-items: center; gap: 10px; padding: 12px; border-top: 1px solid #222226">
+<div style="width: 32px; height: 32px; border-radius: 50%; background: #FFFFFF; color: #0B0B0D; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700">QL</div>
+<div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">QA Lead</span><span style="font-size: 11px; color: #A1A1A8">Admin access</span></div>
+</div>
+</nav>
+
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column">
+<div style="padding: 28px 32px 40px; display: flex; flex-direction: column; gap: 16px; max-width: 1280px; box-sizing: border-box; width: 100%">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px">
+<div><h1 style="margin: 0; font-size: 28px; font-weight: 700">Framework Hub</h1><p style="margin: 4px 0 0; font-size: 14px; color: #55555D">Bring existing automation frameworks into UTP, and export UTP projects in your framework's structure</p></div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<button type="button" onClick="{{goImport}}" style="min-height: 44px; padding: 0 16px; border-radius: 8px; border: 1px solid #111113; background: #FFFFFF; color: #111113; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Import framework</button>
+<button type="button" onClick="{{goExport}}" style="min-height: 44px; padding: 0 18px; border-radius: 8px; border: 0; background: {{accent}}; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Export project</button>
+</div>
+</div>
+
+<div role="tablist" aria-label="Framework Hub sections" style="display: flex; flex-wrap: wrap; gap: 4px; border-bottom: 1px solid #E4E4E7">
+<template data-sc="for" list="{{tabs}}" as="t" hint-placeholder-count="5"><button type="button" role="tab" aria-selected="{{t.on}}" onClick="{{t.pick}}" style="min-height: 44px; padding: 0 16px; border: 0; border-bottom: {{t.border}}; background: transparent; color: {{t.fg}}; font: inherit; font-size: 14px; font-weight: {{t.weight}}; cursor: pointer">{{t.label}}</button></template>
+</div>
+
+<template data-sc="if" value="{{isOverview}}" hint-placeholder-val="{{ false }}">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px">
+<template data-sc="for" list="{{stats}}" as="s" hint-placeholder-count="4"><div style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 4px"><span style="font-size: 12px; color: #55555D">{{s.label}}</span><span style="font-size: 26px; font-weight: 700">{{s.value}}</span><span style="font-size: 12px; color: #55555D">{{s.note}}</span></div></template>
+</div>
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 18px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px"><h2 style="margin: 0; font-size: 16px; font-weight: 600">Linked repositories</h2><button type="button" onClick="{{goImport}}" style="min-height: 36px; padding: 0 12px; border-radius: 8px; border: 1px solid #111113; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Link repository</button></div>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 760px; border-collapse: collapse; font-size: 13px">
+<thead><tr style="text-align: left; color: #55555D; border-bottom: 1px solid #E4E4E7"><th style="padding: 10px 8px; font-weight: 600">Repository</th><th style="padding: 10px 8px; font-weight: 600">Framework</th><th style="padding: 10px 8px; font-weight: 600">Mode</th><th style="padding: 10px 8px; font-weight: 600">Last sync</th><th style="padding: 10px 8px; font-weight: 600">Status</th><th style="padding: 10px 8px; font-weight: 600"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Actions</span></th></tr></thead>
+<tbody>
+<template data-sc="for" list="{{repos}}" as="r" hint-placeholder-count="3">
+<tr style="border-bottom: 1px solid #EEEEF0"><td style="padding: 10px 8px"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600">{{r.repo}}</div><div style="font-size: 12px; color: #55555D">{{r.branch}}</div></td><td style="padding: 10px 8px">{{r.fw}}</td><td style="padding: 10px 8px">{{r.mode}}</td><td style="padding: 10px 8px; color: #55555D">{{r.sync}}</td><td style="padding: 10px 8px"><span style="padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; background: {{r.bg}}; color: {{r.fg}}">{{r.status}}</span></td><td style="padding: 10px 8px"><div style="display: flex; gap: 6px; justify-content: flex-end"><button type="button" style="min-height: 32px; padding: 0 10px; border-radius: 6px; border: 1px solid #111113; background: #FFFFFF; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer">Sync now</button><button type="button" style="min-height: 32px; padding: 0 10px; border-radius: 6px; border: 1px solid #D4D4D8; background: #FFFFFF; font: inherit; font-size: 12px; cursor: pointer">{{r.action}}</button></div></td></tr>
+</template>
+</tbody>
+</table>
+</div>
+</section>
+<section style="background: #FFF1DB; color: #6B4100; border-radius: 10px; padding: 14px 16px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; font-size: 13px"><span><strong>1 sync conflict:</strong> TC-1050 was edited in UTP and in the client repository (tests/auth/test_reset_password.py) since the last sync.</span><div style="display: flex; gap: 6px; flex-wrap: wrap"><button type="button" style="min-height: 36px; padding: 0 12px; border-radius: 8px; border: 1px solid #6B4100; background: transparent; color: #6B4100; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Keep repository</button><button type="button" style="min-height: 36px; padding: 0 12px; border-radius: 8px; border: 1px solid #6B4100; background: transparent; color: #6B4100; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Keep UTP</button><button type="button" style="min-height: 36px; padding: 0 12px; border-radius: 8px; border: 0; background: #6B4100; color: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Compare side by side</button></div></section>
+</template>
+
+<template data-sc="if" value="{{isImport}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+<div style="flex: 3 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">1 · Source</h2>
+<div role="radiogroup" aria-label="Import source" style="display: flex; flex-wrap: wrap; gap: 8px">
+<template data-sc="for" list="{{sources}}" as="s" hint-placeholder-count="3"><button type="button" role="radio" aria-checked="{{s.on}}" onClick="{{s.pick}}" style="min-height: 40px; padding: 0 16px; border-radius: 8px; border: 1px solid #111113; background: {{s.bg}}; color: {{s.fg}}; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">{{s.label}}</button></template>
+</div>
+<template data-sc="if" value="{{srcGh}}" hint-placeholder-val="{{ true }}">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Repository<select style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400; background: #FFFFFF"><option>[org]/portal-qa-automation</option><option>[org]/portal-bdd</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Branch<input value="main" style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 400"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Folder<input value="/" style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 400"></label>
+</div>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 13px"><input type="checkbox" checked="" style="accent-color: {{accent}}; width: 18px; height: 18px">Keep linked and re-sync on every push</label>
+</template>
+<template data-sc="if" value="{{srcGit}}" hint-placeholder-val="{{ false }}">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Git URL<input value="https://[git-host]/[group]/portal-tests.git" style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 400"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46">Read-only deploy token<input type="password" value="placeholder" style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400"></label>
+</div>
+<span style="font-size: 12px; color: #55555D">The token is stored in the vault and used only to read the repository.</span>
+</template>
+<template data-sc="if" value="{{srcZip}}" hint-placeholder-val="{{ false }}">
+<label style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; min-height: 120px; border: 2px dashed #A1A1A8; border-radius: 10px; background: #FAFAFA; font-size: 14px; color: #3F3F46; cursor: pointer; text-align: center; padding: 16px"><span style="font-weight: 600">Drop a ZIP of your automation project or browse</span><span style="font-size: 12px; color: #55555D">Up to 200 MB · checked for path traversal and secrets before parsing</span><input type="file" accept=".zip" style="font: inherit; font-size: 12px"></label>
+</template>
+</section>
+
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px"><h2 style="margin: 0; font-size: 16px; font-weight: 600">2 · Detected framework</h2><button type="button" style="min-height: 36px; padding: 0 12px; border-radius: 8px; border: 1px solid #D4D4D8; background: #FFFFFF; font: inherit; font-size: 13px; cursor: pointer">Re-scan</button></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px">
+<template data-sc="for" list="{{detected}}" as="d" hint-placeholder-count="6"><div style="padding: 12px; border-radius: 8px; background: #F5F5F6; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #55555D">{{d.label}}</span><span style="font-size: 14px; font-weight: 600">{{d.value}}</span></div></template>
+</div>
+<span style="font-size: 12px; color: #55555D">Read by static analysis only; no repository code has run.</span>
+</section>
+
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px"><h2 style="margin: 0; font-size: 16px; font-weight: 600">3 · Review mapping</h2>
+<div role="group" aria-label="Filter by confidence" style="display: flex; gap: 6px; flex-wrap: wrap"><template data-sc="for" list="{{filters}}" as="f" hint-placeholder-count="4"><button type="button" aria-pressed="{{f.on}}" onClick="{{f.pick}}" style="min-height: 34px; padding: 0 12px; border-radius: 999px; border: 1px solid #111113; background: {{f.bg}}; color: {{f.fg}}; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer">{{f.label}}</button></template></div></div>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 680px; border-collapse: collapse; font-size: 13px">
+<thead><tr style="text-align: left; color: #55555D; border-bottom: 1px solid #E4E4E7"><th style="padding: 8px; font-weight: 600">Source in repository</th><th style="padding: 8px; font-weight: 600">Becomes in UTP</th><th style="padding: 8px; font-weight: 600">Confidence</th><th style="padding: 8px; font-weight: 600">Include</th></tr></thead>
+<tbody>
+<template data-sc="for" list="{{items}}" as="i" hint-placeholder-count="8">
+<tr style="border-bottom: 1px solid #EEEEF0; background: {{i.rowBg}}"><td style="padding: 8px"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px">{{i.src}}</div><div style="font-size: 11px; color: #55555D">{{i.kind}}</div></td><td style="padding: 8px">{{i.target}}<div style="font-size: 11px; color: #8A5300">{{i.note}}</div></td><td style="padding: 8px"><span style="padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; background: {{i.bg}}; color: {{i.fg}}">{{i.conf}}</span></td><td style="padding: 8px"><input type="checkbox" checked="{{i.inc}}" aria-label="Include {{i.src}}" style="accent-color: {{accent}}; width: 18px; height: 18px"></td></tr>
+</template>
+</tbody>
+</table>
+</div>
+</section>
+
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">4 · Import mode</h2>
+<div role="radiogroup" aria-label="Import mode" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px">
+<template data-sc="for" list="{{modes}}" as="m" hint-placeholder-count="3"><button type="button" role="radio" aria-checked="{{m.on}}" onClick="{{m.pick}}" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; padding: 14px; border-radius: 10px; border: {{m.border}}; background: #FFFFFF; font: inherit; text-align: left; cursor: pointer"><span style="font-size: 14px; font-weight: 700">{{m.name}}</span><span style="font-size: 12px; color: #55555D">{{m.desc}}</span></button></template>
+</div>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 13px"><input type="checkbox" style="accent-color: {{accent}}; width: 18px; height: 18px">Open a pull request that adds UTP test case markers to the repository</label>
+</section>
+</div>
+
+<aside aria-label="Import summary" style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<section style="background: #0B0B0D; color: #FFFFFF; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Import summary</h2>
+<dl style="margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 8px 14px; font-size: 13px">
+<template data-sc="for" list="{{summary}}" as="s" hint-placeholder-count="6"><dt style="color: #A1A1A8">{{s.k}}</dt><dd style="margin: 0">{{s.v}}</dd></template>
+</dl>
+<div style="padding: 10px; border-radius: 8px; background: #1A1A1D; font-size: 12px; color: #F5C46B">2 secrets found in config/settings.py were not imported. Map them to vault variables before the first run.</div>
+<button type="button" style="min-height: 48px; border-radius: 8px; border: 0; background: {{accent}}; color: #FFFFFF; font: inherit; font-size: 15px; font-weight: 700; cursor: pointer">{{importCta}}</button>
+<span style="font-size: 12px; color: #A1A1A8">Low-confidence items stay excluded until reviewed.</span>
+</section>
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 8px; font-size: 13px">
+<h2 style="margin: 0; font-size: 14px; font-weight: 600">Supported frameworks</h2>
+<span>Python pytest (Playwright or Selenium)</span><span>Python behave (Gherkin)</span><span>Playwright TypeScript / JavaScript</span><span>Appium Python</span><span>Postman collections in the repo</span>
+</section>
+</aside>
+</div>
+</template>
+
+<template data-sc="if" value="{{isExport}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+<div style="flex: 3 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">1 · Target framework</h2>
+<div role="radiogroup" aria-label="Target framework" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px">
+<template data-sc="for" list="{{targets}}" as="t" hint-placeholder-count="3"><button type="button" role="radio" aria-checked="{{t.on}}" onClick="{{t.pick}}" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; padding: 14px; border-radius: 10px; border: {{t.border}}; background: #FFFFFF; font: inherit; text-align: left; cursor: pointer"><span style="font-size: 14px; font-weight: 700">{{t.name}}</span><span style="font-size: 12px; color: #55555D">{{t.desc}}</span></button></template>
+</div>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #3F3F46; max-width: 460px">Framework profile<select style="min-height: 40px; padding: 0 10px; border: 1px solid #D4D4D8; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 400; background: #FFFFFF"><option>{{profile}}</option><option>UTP default</option></select></label>
+</section>
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">2 · Scope and contents</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; font-size: 13px">
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" checked="" style="accent-color: {{accent}}; width: 18px; height: 18px">Entire project · 148 tests</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" checked="" style="accent-color: {{accent}}; width: 18px; height: 18px">Page objects from Object Repository</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" checked="" style="accent-color: {{accent}}; width: 18px; height: 18px">Mobile tests (Appium-Python-Client)</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" checked="" style="accent-color: {{accent}}; width: 18px; height: 18px">API tests (requests) + Postman collection</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" checked="" style="accent-color: {{accent}}; width: 18px; height: 18px">CI workflow and README</label>
+<label style="display: flex; align-items: center; gap: 8px"><input type="checkbox" style="accent-color: {{accent}}; width: 18px; height: 18px">Smoke run before delivery</label>
+</div>
+</section>
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">3 · Destination</h2>
+<div role="radiogroup" aria-label="Destination" style="display: flex; gap: 8px">
+<button type="button" role="radio" aria-checked="{{ghOn}}" onClick="{{pickGh}}" style="min-height: 44px; padding: 0 18px; border-radius: 8px; border: 1px solid #111113; background: {{ghBg}}; color: {{ghFg}}; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">GitHub repository</button>
+<button type="button" role="radio" aria-checked="{{zipOn}}" onClick="{{pickZip}}" style="min-height: 44px; padding: 0 18px; border-radius: 8px; border: 1px solid #111113; background: {{zipBg}}; color: {{zipFg}}; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">ZIP download</button>
+</div>
+<span style="font-size: 13px; color: #3F3F46">{{destNote}}</span>
+</section>
+</div>
+<aside style="flex: 2 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<section aria-label="Preview" style="background: #0B0B0D; color: #ECECEE; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<h2 style="margin: 0; font-size: 14px; font-weight: 600; color: #FFFFFF">Preview</h2>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 20px; white-space: pre; overflow-x: auto; padding: 10px; border-radius: 8px; background: #1A1A1D">{{tree}}</div>
+</section>
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 8px; font-size: 13px">
+<h2 style="margin: 0; font-size: 14px; font-weight: 600">Validation (last dry run)</h2>
+<span><strong style="color: #165C38">PASS</strong> lint and compile, 0 errors</span><span><strong style="color: #165C38">PASS</strong> {{collect}}</span><span><strong style="color: #165C38">PASS</strong> no secrets or real data in output</span>
+</section>
+<button type="button" style="min-height: 48px; border-radius: 8px; border: 0; background: {{accent}}; color: #FFFFFF; font: inherit; font-size: 15px; font-weight: 700; cursor: pointer">{{exportCta}}</button>
+</aside>
+</div>
+</template>
+
+<template data-sc="if" value="{{isProfiles}}" hint-placeholder-val="{{ false }}">
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px">
+<template data-sc="for" list="{{profiles}}" as="p" hint-placeholder-count="3">
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; gap: 8px"><span style="font-weight: 700; font-size: 14px">{{p.name}}</span><span style="font-size: 12px; color: #55555D">{{p.target}}</span></div>
+<span style="font-size: 13px; color: #3F3F46">{{p.desc}}</span>
+<span style="font-size: 12px; color: #55555D">{{p.origin}}</span>
+<div style="display: flex; gap: 6px; margin-top: auto"><button type="button" style="min-height: 36px; padding: 0 12px; border-radius: 8px; border: 1px solid #111113; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Edit templates</button><button type="button" style="min-height: 36px; padding: 0 12px; border-radius: 8px; border: 1px solid #D4D4D8; background: #FFFFFF; font: inherit; font-size: 13px; cursor: pointer">Duplicate</button></div>
+</section>
+</template>
+<section style="background: #FFFFFF; border: 2px dashed #A1A1A8; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 8px; justify-content: center">
+<span style="font-weight: 700; font-size: 14px">New profile from a client repository</span>
+<span style="font-size: 13px; color: #3F3F46">UTP reads folder layout, naming, base classes and fixtures and proposes a profile for review.</span>
+<button type="button" style="align-self: flex-start; min-height: 40px; padding: 0 14px; border-radius: 8px; border: 0; background: {{accent}}; color: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Analyze repository</button>
+</section>
+</div>
+</template>
+
+<template data-sc="if" value="{{isHistory}}" hint-placeholder-val="{{ false }}">
+<section style="background: #FFFFFF; border: 1px solid #E4E4E7; border-radius: 10px; padding: 18px; display: flex; flex-direction: column; gap: 10px">
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 720px; border-collapse: collapse; font-size: 13px">
+<thead><tr style="text-align: left; color: #55555D; border-bottom: 1px solid #E4E4E7"><th style="padding: 10px 8px; font-weight: 600">Job</th><th style="padding: 10px 8px; font-weight: 600">Direction</th><th style="padding: 10px 8px; font-weight: 600">Framework</th><th style="padding: 10px 8px; font-weight: 600">Source / destination</th><th style="padding: 10px 8px; font-weight: 600">Status</th><th style="padding: 10px 8px; font-weight: 600">Result</th></tr></thead>
+<tbody>
+<template data-sc="for" list="{{history}}" as="h" hint-placeholder-count="5">
+<tr style="border-bottom: 1px solid #EEEEF0"><td style="padding: 10px 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px">{{h.id}}</td><td style="padding: 10px 8px; font-weight: 600">{{h.dir}}</td><td style="padding: 10px 8px">{{h.fw}}</td><td style="padding: 10px 8px">{{h.where}}</td><td style="padding: 10px 8px"><span style="padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; background: {{h.bg}}; color: {{h.fg}}">{{h.status}}</span></td><td style="padding: 10px 8px; color: #55555D">{{h.result}}</td></tr>
+</template>
+</tbody>
+</table>
+</div>
+</section>
+</template>
+</div>
+</main>
+</div>
+</template>
+<script type="text/plain" id="logic">
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#C8102E';
+    const st = this.state || {};
+    const tab = st.tab || 'import';
+    const src = st.src || 'gh';
+    const mode = st.mode || 'both';
+    const conf = st.conf || 'all';
+    const fw = st.fw || 'pytest';
+    const dest = st.dest || 'gh';
+    const S = {
+      ok: { bg: '#E7F4EC', fg: '#165C38' },
+      warn: { bg: '#FFF1DB', fg: '#8A5300' },
+      bad: { bg: '#FBE5E9', fg: '#A00C25' },
+      dark: { bg: '#111113', fg: '#FFFFFF' }
+    };
+    const C = { High: S.ok, Medium: S.warn, Low: S.bad };
+    const tabList = [['overview', 'Overview'], ['import', 'Import'], ['export', 'Export'], ['profiles', 'Framework profiles'], ['history', 'History']];
+    const item = (src2, kind, target, c, note) => ({ src: src2, kind, target, conf: c, note: note || '', inc: c !== 'Low', rowBg: c === 'Low' ? '#FDF3F5' : 'transparent', ...C[c] });
+    const allItems = [
+      item('tests/auth/test_login.py::test_valid_login', 'pytest test function', 'TC-1042 User can log in · 5 steps', 'High'),
+      item('features/checkout/guest.feature: Guest checkout', 'behave scenario', 'TC-0870 Guest checkout · 7 structured steps', 'High'),
+      item('pages/login_page.py: LoginPage', 'page object class', 'Object Repository · LoginPage, 8 elements', 'High'),
+      item('pages/checkout_page.py: By.XPATH //div[3]/button', 'Selenium locator', 'CheckoutPage.payButton', 'Medium', 'Suggested: get_by_role("button", name="Pay")'),
+      item('conftest.py: logged_in_user fixture', 'pytest fixture', 'Precondition + setup step on 24 cases', 'Medium'),
+      item('tests/search/test_search.py (parametrize 12 rows)', 'parametrized test', 'TC-0412 + test data set, 12 rows', 'High'),
+      item('lib/keywords.py: run_flow("smoke")', 'custom keyword wrapper', 'Steps inferred with AI', 'Low', 'Review before including'),
+      item('config/settings.py: API_KEY', 'secret value', 'Vault variable API_KEY (value not imported)', 'Medium')
+    ];
+    const items = conf === 'all' ? allItems : allItems.filter((i) => i.conf.toLowerCase() === conf);
+    const modeList = [
+      ['asis', 'Link and run as-is', 'Repository stays the source of truth; runs in UTP with results and traceability'],
+      ['convert', 'Convert to UTP', 'Creates test cases, steps and Object Repository entries editable in UTP'],
+      ['both', 'Both', 'Run as-is now, convert suite by suite later']
+    ];
+    const T = [
+      ['pytest', 'Python · pytest', 'pytest-playwright, page objects, conftest fixtures'],
+      ['behave', 'Python · behave', 'Gherkin features, step definitions, page objects'],
+      ['ts', 'Playwright TypeScript', 'Native @playwright/test project']
+    ];
+    const TREE = {
+      pytest: 'customer-portal-tests/\n  pages/  tests/  data/\n  conftest.py  pytest.ini\n  requirements.txt  .env.example\n  .github/workflows/tests.yml',
+      behave: 'customer-portal-bdd/\n  features/  features/steps/\n  pages/  behave.ini\n  requirements.txt  .env.example',
+      ts: 'customer-portal-tests/\n  pages/  tests/\n  playwright.config.ts  package.json\n  .env.example'
+    };
+    const COLLECT = { pytest: 'pytest --collect-only: 148 tests', behave: 'behave --dry-run: 148 scenarios', ts: 'playwright test --list: 148 tests' };
+    const pill = (on) => ({ bg: on ? '#0B0B0D' : '#FFFFFF', fg: on ? '#FFFFFF' : '#111113', on: on ? 'true' : 'false' });
+    return {
+      accent,
+      isOverview: tab === 'overview', isImport: tab === 'import', isExport: tab === 'export', isProfiles: tab === 'profiles', isHistory: tab === 'history',
+      goImport: () => this.setState({ tab: 'import' }),
+      goExport: () => this.setState({ tab: 'export' }),
+      tabs: tabList.map(([id, label]) => ({ label, on: id === tab ? 'true' : 'false', fg: id === tab ? '#111113' : '#55555D', weight: id === tab ? 700 : 400, border: id === tab ? '3px solid ' + accent : '3px solid transparent', pick: () => this.setState({ tab: id }) })),
+      stats: [
+        { label: 'Linked repositories', value: '3', note: '2 synced today' },
+        { label: 'Imported tests', value: '412', note: '296 converted, 116 run as-is' },
+        { label: 'Items to review', value: '9', note: 'low-confidence mappings' },
+        { label: 'Exports this month', value: '4', note: 'last: pull request #57' }
+      ],
+      repos: [
+        { repo: '[org]/portal-qa-automation', branch: 'main · /', fw: 'Python · pytest + Playwright', mode: 'Both', sync: '12 min ago · 8e41c2a', status: 'Synced', action: 'Settings', ...S.ok },
+        { repo: '[org]/portal-bdd', branch: 'develop · /features', fw: 'Python · behave', mode: 'Link and run as-is', sync: '2 h ago · 1b7d903', status: '1 conflict', action: 'Resolve', ...S.warn },
+        { repo: '[org]/customer-portal-tests', branch: 'utp-export · /', fw: 'Python · pytest (UTP export)', mode: 'Export target', sync: '3 days ago', status: 'Up to date', action: 'Settings', ...S.dark }
+      ],
+      sources: [['gh', 'GitHub repository'], ['git', 'Git URL'], ['zip', 'ZIP upload']].map(([id, label]) => ({ label, ...pill(id === src), pick: () => this.setState({ src: id }) })),
+      srcGh: src === 'gh', srcGit: src === 'git', srcZip: src === 'zip',
+      detected: [
+        { label: 'Framework', value: 'pytest 8.3 + behave 1.2' },
+        { label: 'Driver', value: 'Playwright (Python) 1.48, Selenium 4 (3 files)' },
+        { label: 'Python', value: '3.11 · requirements.txt' },
+        { label: 'Plugins', value: 'pytest-xdist, allure-pytest' },
+        { label: 'Tests found', value: '186 tests, 42 scenarios' },
+        { label: 'Page objects', value: '14 classes, 163 locators' }
+      ],
+      filters: [['all', 'All 8'], ['high', 'High'], ['medium', 'Medium'], ['low', 'Low']].map(([id, label]) => ({ label, ...pill(id === conf), pick: () => this.setState({ conf: id }) })),
+      items,
+      modes: modeList.map(([id, name, desc]) => ({ name, desc, on: id === mode ? 'true' : 'false', border: id === mode ? '2px solid ' + accent : '1px solid #D4D4D8', pick: () => this.setState({ mode: id }) })),
+      summary: [
+        { k: 'Source', v: src === 'zip' ? 'ZIP upload' : (src === 'git' ? 'Git URL' : '[org]/portal-qa-automation · main') },
+        { k: 'Test cases', v: '228 (186 pytest, 42 behave)' },
+        { k: 'Structured steps', v: '1,104' },
+        { k: 'OR elements', v: '163 on 14 pages (21 merged)' },
+        { k: 'Test data sets', v: '9' },
+        { k: 'Needs review', v: '9 low-confidence items' }
+      ],
+      importCta: mode === 'asis' ? 'Link repository and run as-is' : (mode === 'convert' ? 'Convert into UTP' : 'Link, run as-is and convert'),
+      targets: T.map(([id, name, desc]) => ({ name, desc, on: id === fw ? 'true' : 'false', border: id === fw ? '2px solid ' + accent : '1px solid #D4D4D8', pick: () => this.setState({ fw: id }) })),
+      profile: fw === 'ts' ? 'UTP default · Playwright TS' : (fw === 'behave' ? 'Client BDD · behave' : 'Client standard · pytest'),
+      tree: TREE[fw],
+      collect: COLLECT[fw],
+      ghOn: dest === 'gh' ? 'true' : 'false', zipOn: dest === 'zip' ? 'true' : 'false',
+      ghBg: dest === 'gh' ? '#0B0B0D' : '#FFFFFF', ghFg: dest === 'gh' ? '#FFFFFF' : '#111113',
+      zipBg: dest === 'zip' ? '#0B0B0D' : '#FFFFFF', zipFg: dest === 'zip' ? '#FFFFFF' : '#111113',
+      pickGh: () => this.setState({ dest: 'gh' }),
+      pickZip: () => this.setState({ dest: 'zip' }),
+      destNote: dest === 'gh' ? 'Commits to branch utp-export/2026-11-12 in [org]/customer-portal-tests and opens a pull request; only files marked "generated by UTP" are overwritten.' : 'Builds customer-portal-tests.zip with manifest.json and checksums; the download link expires after 24 hours.',
+      exportCta: dest === 'gh' ? 'Export and open pull request' : 'Build ZIP for download',
+      profiles: [
+        { name: 'Client standard', target: 'Python · pytest', desc: 'snake_case files, BasePage in pages/base_page.py, fixtures in conftest.py, Allure reporting', origin: 'Analysed from [org]/portal-qa-automation' },
+        { name: 'Client BDD', target: 'Python · behave', desc: 'One feature per suite, steps in features/steps/, environment.py hooks', origin: 'Analysed from [org]/portal-bdd' },
+        { name: 'UTP default', target: 'Playwright TS', desc: 'Page objects in pages/, one spec per test case, tags as Playwright tags', origin: 'Built-in' }
+      ],
+      history: [
+        { id: 'IMP-014', dir: 'Import', fw: 'pytest + behave', where: '[org]/portal-qa-automation', status: 'Applied', result: '228 cases, 9 to review', ...S.ok },
+        { id: 'EXP-031', dir: 'Export', fw: 'Python · pytest', where: 'GitHub pull request #57', status: 'Delivered', result: '3 converted items flagged', ...S.ok },
+        { id: 'IMP-013', dir: 'Import', fw: 'behave', where: 'portal-bdd.zip', status: 'Partial', result: '4 scenarios used custom steps', ...S.warn },
+        { id: 'EXP-030', dir: 'Export', fw: 'Python · behave', where: 'ZIP download', status: 'Delivered', result: 'Link expired', ...S.ok },
+        { id: 'IMP-012', dir: 'Import', fw: 'Playwright TS', where: '[org]/web-e2e', status: 'Failed', result: 'package.json not found in folder', ...S.bad }
+      ]
+    };
+  }
+}
+</script>
+<script type="application/json" id="props">{"accent": "#C8102E"}</script>
+</body>
+</html>

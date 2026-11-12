@@ -130,10 +130,17 @@
       return;
     }
     var y = window.scrollY;
+    var active = document.activeElement;
+    var selects = Array.prototype.map.call(app.querySelectorAll('select'), function (s) { return s.value; });
     var frag = document.createDocumentFragment();
     render(tpl.content.childNodes, [vals], frag);
     app.replaceChildren(frag);
+    // keep chosen <select> values across re-renders (e.g. environment switch)
+    Array.prototype.forEach.call(app.querySelectorAll('select'), function (s, i) {
+      if (selects[i] !== undefined && Array.prototype.some.call(s.options, function (o) { return o.value === selects[i]; })) s.value = selects[i];
+    });
     window.scrollTo(0, y);
+    if (active && active.id) { var again = document.getElementById(active.id); if (again) again.focus(); }
   }
 
   function schedule() {
